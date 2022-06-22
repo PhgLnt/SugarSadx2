@@ -1,0 +1,23 @@
+06/22/22 18:48:50 [12252][1][FATAL] kbdocuments for case_kbdocuments failed to load
+
+06/22/22 18:48:51 [12252][1][FATAL] quotes for projects_quotes failed to load
+
+06/22/22 18:48:51 [12252][1][FATAL] holidays for users_holidays failed to load
+
+06/22/22 18:48:51 [12252][1][FATAL] project_resource for projects_users_resources failed to load
+
+06/22/22 18:48:51 [12252][1][FATAL] project_resource for projects_contacts_resources failed to load
+
+06/22/22 18:48:51 [12252][1][FATAL] holidays for users_holidays failed to load
+
+06/22/22 18:48:51 [12252][1][FATAL] project_resource for projects_users_resources failed to load
+
+06/22/22 18:48:51 [12252][1][FATAL] assigned_user_link for tracker_user_id failed to load
+
+06/22/22 18:48:51 [12252][1][FATAL] Class Connectors does not exist, unable to rename.
+06/22/22 18:48:51 [12252][1][FATAL] Class CustomFields does not exist, unable to rename.
+06/22/22 18:48:51 [12252][1][FATAL] Class Audit does not exist, unable to rename.
+06/22/22 18:48:52 [12252][1][FATAL] holidays for users_holidays failed to load
+
+06/22/22 18:48:52 [12252][1][FATAL] project_resource for projects_users_resources failed to load
+

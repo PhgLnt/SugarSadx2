@@ -1,0 +1,200 @@
+
+2022-06-22 18:03:26...installerHook: Could not find custom/install/install_hooks.php
+2022-06-22 18:04:43...installerHook: Could not find custom/install/install_hooks.php
+2022-06-22 18:04:46...installerHook: Could not find custom/install/install_hooks.php
+2022-06-22 18:04:49...Begin System Check Process *************
+2022-06-22 18:04:49...XML Parsing Support Found
+2022-06-22 18:04:49...MBString Support Found
+2022-06-22 18:04:49...ZIP Support Found
+2022-06-22 18:04:49.../custom directory and subdirectory check passed
+2022-06-22 18:04:49...cache directory and subdirectory check passed
+2022-06-22 18:04:50.../module  directory and subdirectory check passed
+2022-06-22 18:04:50.../upload directory check passed
+2022-06-22 18:04:50.../zip check passed
+2022-06-22 18:04:50...PCRE version check passed
+2022-06-22 18:04:50...installerHook: Could not find custom/install/install_hooks.php
+2022-06-22 18:04:50...php.ini location found. C:\wamp64\bin\apache\apache2.4.51\bin\php.ini
+2022-06-22 18:04:50...Outputting HTML for System check
+2022-06-22 18:04:50...No Errors were found *************
+2022-06-22 18:04:53...installerHook: Could not find custom/install/install_hooks.php
+2022-06-22 18:04:59...installerHook: Could not find custom/install/install_hooks.php
+2022-06-22 18:05:01...installerHook: Could not find custom/install/install_hooks.php
+2022-06-22 18:05:20...Begin DB Check Process *************
+2022-06-22 18:05:20...testing with mysql:mysqli
+2022-06-22 18:05:20...Basic form info is valid, continuing Process.
+2022-06-22 18:05:20...Testing user account...
+2022-06-22 18:05:20...Connection made using  host: localhost, usr: root
+2022-06-22 18:05:20...Testing priviliged account...
+2022-06-22 18:05:20...Connection made using  host: localhost, usr: root
+2022-06-22 18:05:20...DB not selected, will create sugarcrm
+2022-06-22 18:05:20...Passed DB install check
+2022-06-22 18:05:20...SUCCESS:: no errors detected!
+2022-06-22 18:05:20...End DB Check Process *************
+2022-06-22 18:05:21...installerHook: Could not find custom/install/install_hooks.php
+2022-06-22 18:05:32...installerHook: Could not find custom/install/install_hooks.php
+2022-06-22 18:05:37...installerHook: Could not find custom/install/install_hooks.php
+2022-06-22 18:05:37...calling handleSugarConfig()
+2022-06-22 18:05:37...calling handleLog4Php()
+2022-06-22 18:05:37...calling handleHtaccess()
+2022-06-22 18:05:37...calling handleDbCreateDatabase()
+2022-06-22 18:05:39...looping through all the Beans and create their tables
+2022-06-22 18:05:39...processing table acl_actions
+2022-06-22 18:05:39...creating table acl_actions
+2022-06-22 18:05:39...creating Relationship Meta for ACLAction
+2022-06-22 18:05:39...processing table acl_roles
+2022-06-22 18:05:39...creating table acl_roles
+2022-06-22 18:05:39...creating Relationship Meta for ACLRole
+2022-06-22 18:05:39...processing table relationships
+2022-06-22 18:05:39...creating table relationships
+2022-06-22 18:05:39...creating Relationship Meta for Relationship
+2022-06-22 18:05:39...processing table leads
+2022-06-22 18:05:39...creating table leads
+2022-06-22 18:05:39...creating Relationship Meta for Lead
+2022-06-22 18:05:39...processing table cases
+2022-06-22 18:05:39...creating table cases
+2022-06-22 18:05:39...creating Relationship Meta for Case
+2022-06-22 18:05:40...processing table bugs
+2022-06-22 18:05:40...creating table bugs
+2022-06-22 18:05:40...creating Relationship Meta for Bug
+2022-06-22 18:05:40...processing table users
+2022-06-22 18:05:40...creating table users
+2022-06-22 18:05:40...creating Relationship Meta for User
+2022-06-22 18:05:40...processing table campaign_log
+2022-06-22 18:05:40...creating table campaign_log
+2022-06-22 18:05:40...creating Relationship Meta for CampaignLog
+2022-06-22 18:05:40...processing table project
+2022-06-22 18:05:40...creating table project
+2022-06-22 18:05:40...creating Relationship Meta for Project
+2022-06-22 18:05:40...processing table project_task
+2022-06-22 18:05:40...creating table project_task
+2022-06-22 18:05:40...creating Relationship Meta for ProjectTask
+2022-06-22 18:05:40...processing table campaigns
+2022-06-22 18:05:40...creating table campaigns
+2022-06-22 18:05:40...creating Relationship Meta for Campaign
+2022-06-22 18:05:40...processing table prospect_lists
+2022-06-22 18:05:40...creating table prospect_lists
+2022-06-22 18:05:40...creating Relationship Meta for ProspectList
+2022-06-22 18:05:40...processing table prospects
+2022-06-22 18:05:40...creating table prospects
+2022-06-22 18:05:40...creating Relationship Meta for Prospect
+2022-06-22 18:05:40...processing table email_marketing
+2022-06-22 18:05:40...creating table email_marketing
+2022-06-22 18:05:40...creating Relationship Meta for EmailMarketing
+2022-06-22 18:05:40...processing table campaign_trkrs
+2022-06-22 18:05:40...creating table campaign_trkrs
+2022-06-22 18:05:40...creating Relationship Meta for CampaignTracker
+2022-06-22 18:05:41...processing table releases
+2022-06-22 18:05:41...creating table releases
+2022-06-22 18:05:41...creating Relationship Meta for Release
+2022-06-22 18:05:41...processing table emailman
+2022-06-22 18:05:41...creating table emailman
+2022-06-22 18:05:41...creating Relationship Meta for EmailMan
+2022-06-22 18:05:41...processing table schedulers
+2022-06-22 18:05:41...creating table schedulers
+2022-06-22 18:05:41...creating Relationship Meta for Scheduler
+2022-06-22 18:05:41...processing table job_queue
+2022-06-22 18:05:41...creating table job_queue
+2022-06-22 18:05:41...creating Relationship Meta for SchedulersJob
+2022-06-22 18:05:41...processing table contacts
+2022-06-22 18:05:41...creating table contacts
+2022-06-22 18:05:41...creating Relationship Meta for Contact
+2022-06-22 18:05:41...processing table accounts
+2022-06-22 18:05:41...creating table accounts
+2022-06-22 18:05:41...creating Relationship Meta for Account
+2022-06-22 18:05:41...processing table opportunities
+2022-06-22 18:05:41...creating table opportunities
+2022-06-22 18:05:41...creating Relationship Meta for Opportunity
+2022-06-22 18:05:41...processing table email_templates
+2022-06-22 18:05:41...creating table email_templates
+2022-06-22 18:05:41...creating Relationship Meta for EmailTemplate
+2022-06-22 18:05:41...processing table notes
+2022-06-22 18:05:41...creating table notes
+2022-06-22 18:05:41...creating Relationship Meta for Note
+2022-06-22 18:05:41...processing table calls
+2022-06-22 18:05:42...creating table calls
+2022-06-22 18:05:42...creating Relationship Meta for Call
+2022-06-22 18:05:42...processing table emails
+2022-06-22 18:05:42...creating table emails
+2022-06-22 18:05:42...creating Relationship Meta for Email
+2022-06-22 18:05:42...processing table meetings
+2022-06-22 18:05:42...creating table meetings
+2022-06-22 18:05:42...creating Relationship Meta for Meeting
+2022-06-22 18:05:42...processing table tasks
+2022-06-22 18:05:42...creating table tasks
+2022-06-22 18:05:42...creating Relationship Meta for Task
+2022-06-22 18:05:42...processing table users
+2022-06-22 18:05:42...processing table users
+2022-06-22 18:05:42...processing table currencies
+2022-06-22 18:05:42...creating table currencies
+2022-06-22 18:05:42...creating Relationship Meta for Currency
+2022-06-22 18:05:42...processing table tracker
+2022-06-22 18:05:42...creating table tracker
+2022-06-22 18:05:42...creating Relationship Meta for Tracker
+2022-06-22 18:05:42...processing table import_maps
+2022-06-22 18:05:42...creating table import_maps
+2022-06-22 18:05:42...creating Relationship Meta for ImportMap
+2022-06-22 18:05:42...processing table users_last_import
+2022-06-22 18:05:42...creating table users_last_import
+2022-06-22 18:05:42...creating Relationship Meta for UsersLastImport
+2022-06-22 18:05:42...processing table config
+2022-06-22 18:05:42...creating table config
+2022-06-22 18:05:42...creating Relationship Meta for Administration
+2022-06-22 18:05:42...processing table upgrade_history
+2022-06-22 18:05:42...creating table upgrade_history
+2022-06-22 18:05:42...creating Relationship Meta for UpgradeHistory
+2022-06-22 18:05:42...processing table vcals
+2022-06-22 18:05:42...creating table vcals
+2022-06-22 18:05:42...creating Relationship Meta for vCal
+2022-06-22 18:05:42...processing table versions
+2022-06-22 18:05:42...creating table versions
+2022-06-22 18:05:42...creating Relationship Meta for Version
+2022-06-22 18:05:42...processing table roles
+2022-06-22 18:05:42...creating table roles
+2022-06-22 18:05:42...creating Relationship Meta for Role
+2022-06-22 18:05:42...processing table documents
+2022-06-22 18:05:42...creating table documents
+2022-06-22 18:05:42...creating Relationship Meta for Document
+2022-06-22 18:05:42...processing table document_revisions
+2022-06-22 18:05:42...creating table document_revisions
+2022-06-22 18:05:42...creating Relationship Meta for DocumentRevision
+2022-06-22 18:05:42...processing table fields_meta_data
+2022-06-22 18:05:42...creating table fields_meta_data
+2022-06-22 18:05:42...creating Relationship Meta for FieldsMetaData
+2022-06-22 18:05:43...processing table inbound_email
+2022-06-22 18:05:43...creating table inbound_email
+2022-06-22 18:05:43...creating Relationship Meta for InboundEmail
+2022-06-22 18:05:43...processing table saved_search
+2022-06-22 18:05:43...creating table saved_search
+2022-06-22 18:05:43...creating Relationship Meta for SavedSearch
+2022-06-22 18:05:43...processing table user_preferences
+2022-06-22 18:05:43...creating table user_preferences
+2022-06-22 18:05:43...creating Relationship Meta for UserPreference
+2022-06-22 18:05:43...processing table 
+2022-06-22 18:05:43...processing table email_addresses
+2022-06-22 18:05:43...creating table email_addresses
+2022-06-22 18:05:43...creating Relationship Meta for EmailAddress
+2022-06-22 18:05:43...processing table emails_text
+2022-06-22 18:05:43...creating table emails_text
+2022-06-22 18:05:43...creating Relationship Meta for EmailText
+2022-06-22 18:05:43...processing table sugarfeed
+2022-06-22 18:05:43...creating table sugarfeed
+2022-06-22 18:05:43...creating Relationship Meta for SugarFeed
+2022-06-22 18:05:43...processing table eapm
+2022-06-22 18:05:43...creating table eapm
+2022-06-22 18:05:43...creating Relationship Meta for EAPM
+2022-06-22 18:05:43...processing table oauth_consumer
+2022-06-22 18:05:43...creating table oauth_consumer
+2022-06-22 18:05:43...creating Relationship Meta for OAuthKey
+2022-06-22 18:05:43...processing table oauth_tokens
+2022-06-22 18:05:43...creating table oauth_tokens
+2022-06-22 18:05:43...creating Relationship Meta for OAuthToken
+2022-06-22 18:05:44...Begin creating Defaults
+2022-06-22 18:05:44...insert defaults into config table
+2022-06-22 18:05:44...Creating default users
+2022-06-22 18:05:44...Creating default scheduler jobs
+2022-06-22 18:05:44...Enable SugarFeeds
+2022-06-22 18:05:44...Enable InsideView Connector
+2022-06-22 18:05:44...Creating FTS logic hook
+2022-06-22 18:05:44...populating the db with seed data
+2022-06-22 18:06:04...Installation has completed *********
+2022-06-22 18:06:13...installerHook: Could not find custom/install/install_hooks.php
