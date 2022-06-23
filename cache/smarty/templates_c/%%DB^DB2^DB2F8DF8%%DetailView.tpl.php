@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.11, created on 2022-06-23 05:40:30
+<?php /* Smarty version 2.6.11, created on 2022-06-23 17:04:24
          compiled from cache/modules/P_CustomOrders/DetailView.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_include', 'cache/modules/P_CustomOrders/DetailView.tpl', 33, false),array('function', 'counter', 'cache/modules/P_CustomOrders/DetailView.tpl', 38, false),array('function', 'sugar_translate', 'cache/modules/P_CustomOrders/DetailView.tpl', 47, false),array('function', 'sugar_ajax_url', 'cache/modules/P_CustomOrders/DetailView.tpl', 85, false),array('function', 'sugar_number_format', 'cache/modules/P_CustomOrders/DetailView.tpl', 111, false),array('modifier', 'strip_semicolon', 'cache/modules/P_CustomOrders/DetailView.tpl', 48, false),array('modifier', 'escape', 'cache/modules/P_CustomOrders/DetailView.tpl', 194, false),array('modifier', 'url2html', 'cache/modules/P_CustomOrders/DetailView.tpl', 194, false),array('modifier', 'nl2br', 'cache/modules/P_CustomOrders/DetailView.tpl', 194, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_include', 'cache/modules/P_CustomOrders/DetailView.tpl', 33, false),array('function', 'counter', 'cache/modules/P_CustomOrders/DetailView.tpl', 38, false),array('function', 'sugar_translate', 'cache/modules/P_CustomOrders/DetailView.tpl', 47, false),array('function', 'sugar_ajax_url', 'cache/modules/P_CustomOrders/DetailView.tpl', 85, false),array('function', 'sugar_number_format', 'cache/modules/P_CustomOrders/DetailView.tpl', 111, false),array('modifier', 'strip_semicolon', 'cache/modules/P_CustomOrders/DetailView.tpl', 48, false),array('modifier', 'escape', 'cache/modules/P_CustomOrders/DetailView.tpl', 219, false),array('modifier', 'url2html', 'cache/modules/P_CustomOrders/DetailView.tpl', 219, false),array('modifier', 'nl2br', 'cache/modules/P_CustomOrders/DetailView.tpl', 219, false),)), $this); ?>
 
 
 <script language="javascript">
@@ -176,19 +176,30 @@ SUGAR.util.doWhen(function(){
 <?php echo smarty_function_counter(array('name' => 'fieldsUsed'), $this);?>
 
 <td width='12.5%' scope="col">
-<?php if (! $this->_tpl_vars['fields']['created_by_name']['hidden']):  ob_start();  echo smarty_function_sugar_translate(array('label' => 'LBL_CREATED','module' => 'P_CustomOrders'), $this); $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean();  echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+<?php if (! $this->_tpl_vars['fields']['total_price_c']['hidden']):  ob_start();  echo smarty_function_sugar_translate(array('label' => 'LBL_TOTAL_PRICE','module' => 'P_CustomOrders'), $this); $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean();  echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
 :
 <?php endif; ?>
 </td>
-<td width='37.5%'  >
-<?php if (! $this->_tpl_vars['fields']['created_by_name']['hidden']):  echo smarty_function_counter(array('name' => 'panelFieldCount'), $this);?>
+<td width='37.5%' colspan='3' >
+<?php if (! $this->_tpl_vars['fields']['total_price_c']['hidden']):  echo smarty_function_counter(array('name' => 'panelFieldCount'), $this);?>
 
 
-<span id="created_by" class="sugar_field" data-id-value="<?php echo $this->_tpl_vars['fields']['created_by']['value']; ?>
-"><?php echo $this->_tpl_vars['fields']['created_by_name']['value']; ?>
+<span class="sugar_field" id="<?php echo $this->_tpl_vars['fields']['total_price_c']['name']; ?>
+">
+<?php echo smarty_function_sugar_number_format(array('var' => $this->_tpl_vars['fields']['total_price_c']['value'],'precision' => 0), $this);?>
+
 </span>
 <?php endif; ?>
 </td>
+</tr>
+<?php $this->_smarty_vars['capture']['tr'] = ob_get_contents();  $this->assign('tableRow', ob_get_contents());ob_end_clean();  if ($this->_tpl_vars['fieldsUsed'] > 0 && $this->_tpl_vars['fieldsUsed'] != $this->_tpl_vars['fieldsHidden']):  echo $this->_tpl_vars['tableRow']; ?>
+
+<?php endif;  echo smarty_function_counter(array('name' => 'fieldsUsed','start' => 0,'print' => false,'assign' => 'fieldsUsed'), $this);?>
+
+<?php echo smarty_function_counter(array('name' => 'fieldsHidden','start' => 0,'print' => false,'assign' => 'fieldsHidden'), $this);?>
+
+<?php ob_start(); ?>
+<tr>
 <?php echo smarty_function_counter(array('name' => 'fieldsUsed'), $this);?>
 
 <td width='12.5%' scope="col">
@@ -204,6 +215,22 @@ SUGAR.util.doWhen(function(){
 <?php if (strlen ( $this->_tpl_vars['fields']['date_entered']['value'] ) <= 0):  $this->assign('value', $this->_tpl_vars['fields']['date_entered']['default_value']);  else:  $this->assign('value', $this->_tpl_vars['fields']['date_entered']['value']);  endif; ?>
 <span class="sugar_field" id="<?php echo $this->_tpl_vars['fields']['date_entered']['name']; ?>
 "><?php echo $this->_tpl_vars['value']; ?>
+</span>
+<?php endif; ?>
+</td>
+<?php echo smarty_function_counter(array('name' => 'fieldsUsed'), $this);?>
+
+<td width='12.5%' scope="col">
+<?php if (! $this->_tpl_vars['fields']['created_by_name']['hidden']):  ob_start();  echo smarty_function_sugar_translate(array('label' => 'LBL_CREATED','module' => 'P_CustomOrders'), $this); $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean();  echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
+<?php endif; ?>
+</td>
+<td width='37.5%'  >
+<?php if (! $this->_tpl_vars['fields']['created_by_name']['hidden']):  echo smarty_function_counter(array('name' => 'panelFieldCount'), $this);?>
+
+
+<span id="created_by" class="sugar_field" data-id-value="<?php echo $this->_tpl_vars['fields']['created_by']['value']; ?>
+"><?php echo $this->_tpl_vars['fields']['created_by_name']['value']; ?>
 </span>
 <?php endif; ?>
 </td>

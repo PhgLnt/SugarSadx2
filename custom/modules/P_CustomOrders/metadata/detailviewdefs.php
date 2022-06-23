@@ -74,12 +74,20 @@ array (
         array (
           0 => 
           array (
+            'name' => 'total_price_c',
+            'label' => 'LBL_TOTAL_PRICE',
+          ),
+        ),
+        4 => 
+        array (
+          0 => 'date_entered',
+          1 => 
+          array (
             'name' => 'created_by_name',
             'label' => 'LBL_CREATED',
           ),
-          1 => 'date_entered',
         ),
-        4 => 
+        5 => 
         array (
           0 => 'description',
         ),

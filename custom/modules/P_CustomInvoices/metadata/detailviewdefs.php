@@ -77,6 +77,19 @@ array (
         array (
           0 => 
           array (
+            'name' => 'order_price_c',
+            'label' => 'LBL_ORDER_PRICE',
+          ),
+          1 => 
+          array (
+            'name' => 'total_discount_c',
+            'label' => 'LBL_TOTAL_DISCOUNT',
+          ),
+        ),
+        3 => 
+        array (
+          0 => 
+          array (
             'name' => 'total_price_c',
             'label' => 'LBL_TOTAL_PRICE',
           ),
@@ -86,9 +99,12 @@ array (
       array (
         0 => 
         array (
-          0 => 'description',
         ),
         1 => 
+        array (
+          0 => 'description',
+        ),
+        2 => 
         array (
           0 => 
           array (

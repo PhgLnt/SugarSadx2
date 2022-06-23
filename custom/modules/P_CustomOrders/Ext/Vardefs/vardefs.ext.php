@@ -16,7 +16,7 @@ $dictionary['P_CustomOrders']['fields']['name']['unified_search']=false;
 
  
 
- // created: 2022-06-22 19:51:16
+ // created: 2022-06-23 16:44:53
 $dictionary['P_CustomOrders']['fields']['product_order_c']['labelValue']='Product Name';
 
  
@@ -25,12 +25,17 @@ $dictionary['P_CustomOrders']['fields']['product_order_c']['labelValue']='Produc
 
  
 
- // created: 2022-06-22 20:07:38
+ // created: 2022-06-23 16:53:28
 $dictionary['P_CustomOrders']['fields']['quantity_c']['labelValue']='Quantity';
 
  
 
- // created: 2022-06-22 20:12:45
+ // created: 2022-06-23 16:53:56
+$dictionary['P_CustomOrders']['fields']['total_price_c']['labelValue']='Total Price';
+
+ 
+
+ // created: 2022-06-23 16:53:48
 $dictionary['P_CustomOrders']['fields']['unit_price_c']['labelValue']='Unit Price';
 
  

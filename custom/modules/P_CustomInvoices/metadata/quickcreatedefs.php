@@ -52,13 +52,11 @@ array (
             'studio' => 'visible',
             'label' => 'LBL_ORDER_NUMBER',
           ),
-          1 => 
-          array (
-            'name' => 'total_price_c',
-            'label' => 'LBL_TOTAL_PRICE',
-          ),
         ),
         2 => 
+        array (
+        ),
+        3 => 
         array (
           0 => 
           array (
@@ -66,13 +64,8 @@ array (
             'comment' => 'Date record created',
             'label' => 'LBL_DATE_ENTERED',
           ),
-          1 => 
-          array (
-            'name' => 'created_by_name',
-            'label' => 'LBL_CREATED',
-          ),
         ),
-        3 => 
+        4 => 
         array (
           0 => 
           array (

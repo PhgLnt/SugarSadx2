@@ -33,6 +33,13 @@ array (
     'label' => 'LBL_UNIT_PRICE',
     'width' => '10%',
   ),
+  'TOTAL_PRICE_C' => 
+  array (
+    'type' => 'decimal',
+    'default' => true,
+    'label' => 'LBL_TOTAL_PRICE',
+    'width' => '10%',
+  ),
   'DESCRIPTION' => 
   array (
     'type' => 'text',

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.11, created on 2022-06-23 05:40:16
+<?php /* Smarty version 2.6.11, created on 2022-06-23 17:03:59
          compiled from cache/modules/P_CustomOrders/EditView.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'cache/modules/P_CustomOrders/EditView.tpl', 38, false),array('modifier', 'strip_semicolon', 'cache/modules/P_CustomOrders/EditView.tpl', 57, false),array('function', 'sugar_include', 'cache/modules/P_CustomOrders/EditView.tpl', 44, false),array('function', 'counter', 'cache/modules/P_CustomOrders/EditView.tpl', 50, false),array('function', 'sugar_translate', 'cache/modules/P_CustomOrders/EditView.tpl', 56, false),array('function', 'sugar_getimagepath', 'cache/modules/P_CustomOrders/EditView.tpl', 108, false),array('function', 'sugar_number_format', 'cache/modules/P_CustomOrders/EditView.tpl', 135, false),)), $this); ?>
@@ -314,6 +314,7 @@ addToValidate(\'EditView\', \'assigned_user_id\', \'relate\', false,\'';  echo s
 addToValidate(\'EditView\', \'assigned_user_name\', \'relate\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_ASSIGNED_TO_NAME','module' => 'P_CustomOrders','for_js' => true), $this); echo '\' );
 addToValidate(\'EditView\', \'product_order_c\', \'relate\', true,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_PRODUCT_ORDER','module' => 'P_CustomOrders','for_js' => true), $this); echo '\' );
 addToValidate(\'EditView\', \'quantity_c\', \'decimal\', true,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_QUANTITY','module' => 'P_CustomOrders','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'total_price_c\', \'decimal\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_TOTAL_PRICE','module' => 'P_CustomOrders','for_js' => true), $this); echo '\' );
 addToValidate(\'EditView\', \'unit_price_c\', \'decimal\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_UNIT_PRICE','module' => 'P_CustomOrders','for_js' => true), $this); echo '\' );
 addToValidate(\'EditView\', \'p_customproducts_id_c\', \'id\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_PRODUCT_ORDER_P_CUSTOMPRODUCTS_ID','module' => 'P_CustomOrders','for_js' => true), $this); echo '\' );
 addToValidateBinaryDependency(\'EditView\', \'assigned_user_name\', \'alpha\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'ERR_SQS_NO_MATCH_FIELD','module' => 'P_CustomOrders','for_js' => true), $this); echo ': ';  echo smarty_function_sugar_translate(array('label' => 'LBL_ASSIGNED_TO','module' => 'P_CustomOrders','for_js' => true), $this); echo '\', \'assigned_user_id\' );

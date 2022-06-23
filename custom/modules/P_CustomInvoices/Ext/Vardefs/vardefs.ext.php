@@ -6,13 +6,8 @@
 
  
 
- // created: 2022-06-22 18:58:38
+ // created: 2022-06-23 17:16:55
 $dictionary['P_CustomInvoices']['fields']['cus_invoice_c']['labelValue']='Customer';
-
- 
-
- // created: 2022-06-22 19:58:56
-$dictionary['P_CustomInvoices']['fields']['discount_c']['labelValue']='Discount';
 
  
 
@@ -34,11 +29,21 @@ $dictionary['P_CustomInvoices']['fields']['order_number_c']['labelValue']='Order
 
  
 
+ // created: 2022-06-23 17:36:39
+$dictionary['P_CustomInvoices']['fields']['order_price_c']['labelValue']='Order Price';
+
+ 
+
  // created: 2022-06-22 19:06:06
 
  
 
- // created: 2022-06-22 19:42:12
+ // created: 2022-06-23 17:51:46
+$dictionary['P_CustomInvoices']['fields']['total_discount_c']['labelValue']='Total Discount';
+
+ 
+
+ // created: 2022-06-23 17:54:30
 $dictionary['P_CustomInvoices']['fields']['total_price_c']['labelValue']='Total Price';
 
  

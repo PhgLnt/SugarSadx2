@@ -36,6 +36,20 @@ array (
     'link' => true,
     'width' => '10%',
   ),
+  'ORDER_PRICE_C' => 
+  array (
+    'type' => 'decimal',
+    'default' => true,
+    'label' => 'LBL_ORDER_PRICE',
+    'width' => '10%',
+  ),
+  'TOTAL_DISCOUNT_C' => 
+  array (
+    'type' => 'decimal',
+    'default' => true,
+    'label' => 'LBL_TOTAL_DISCOUNT',
+    'width' => '10%',
+  ),
   'TOTAL_PRICE_C' => 
   array (
     'type' => 'decimal',
@@ -58,19 +72,19 @@ array (
     'label' => 'LBL_CREATED',
     'id' => 'CREATED_BY',
     'width' => '10%',
-    'default' => true,
-  ),
-  'DATE_MODIFIED' => 
-  array (
-    'type' => 'datetime',
-    'label' => 'LBL_DATE_MODIFIED',
-    'width' => '10%',
     'default' => false,
   ),
   'DATE_ENTERED' => 
   array (
     'type' => 'datetime',
     'label' => 'LBL_DATE_ENTERED',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'DATE_MODIFIED' => 
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_MODIFIED',
     'width' => '10%',
     'default' => false,
   ),
