@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.11, created on 2022-06-23 05:35:00
-         compiled from cache/modules/P_CustomInvoices/SearchFormHeader.tpl */ ?>
+<?php /* Smarty version 2.6.11, created on 2022-06-23 05:35:42
+         compiled from cache/modules/P_CustomProducts/SearchFormHeader.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_getjspath', 'cache/modules/P_CustomInvoices/SearchFormHeader.tpl', 4, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_getjspath', 'cache/modules/P_CustomProducts/SearchFormHeader.tpl', 4, false),)), $this); ?>
 
 <div class="clear"></div>
 <div class='listViewBody'>

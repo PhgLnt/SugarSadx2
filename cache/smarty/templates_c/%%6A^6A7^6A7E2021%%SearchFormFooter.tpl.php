@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.11, created on 2022-06-23 05:35:00
-         compiled from cache/modules/P_CustomInvoices/SearchFormFooter.tpl */ ?>
+<?php /* Smarty version 2.6.11, created on 2022-06-23 05:35:43
+         compiled from cache/modules/P_CustomProducts/SearchFormFooter.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_getimagepath', 'cache/modules/P_CustomInvoices/SearchFormFooter.tpl', 11, false),array('function', 'sugar_translate', 'cache/modules/P_CustomInvoices/SearchFormFooter.tpl', 12, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_getimagepath', 'cache/modules/P_CustomProducts/SearchFormFooter.tpl', 11, false),array('function', 'sugar_translate', 'cache/modules/P_CustomProducts/SearchFormFooter.tpl', 12, false),)), $this); ?>
 
 </form>
 <?php echo '

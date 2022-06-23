@@ -241,7 +241,7 @@
       'vname' => 'LBL_QUANTITY',
       'type' => 'decimal',
       'massupdate' => '0',
-      'default' => '',
+      'default' => NULL,
       'no_default' => false,
       'comments' => '',
       'help' => '',
