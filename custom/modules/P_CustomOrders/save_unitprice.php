@@ -9,7 +9,7 @@ class saveUnitprice
 //        $sqlSelect = "SELECT LPAD((SELECT COUNT(*)+1 FROM p_customorders), 4, 0) as count";
 //        $row = $db->fetchOne($sqlSelect);
         if(!empty($row)){ }
-        $bean->unit_price = 150000;
+        $bean->unit_price_c = 160000;
 
     }
 }

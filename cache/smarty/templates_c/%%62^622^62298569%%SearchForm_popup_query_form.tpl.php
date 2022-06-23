@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.11, created on 2022-06-22 20:03:59
-         compiled from cache/modules/P_CustomOrders/SearchForm_popup_query_form.tpl */ ?>
+<?php /* Smarty version 2.6.11, created on 2022-06-23 05:40:22
+         compiled from cache/modules/P_CustomProducts/SearchForm_popup_query_form.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'counter', 'cache/modules/P_CustomOrders/SearchForm_popup_query_form.tpl', 26, false),array('function', 'math', 'cache/modules/P_CustomOrders/SearchForm_popup_query_form.tpl', 27, false),array('function', 'sugar_getimagepath', 'cache/modules/P_CustomOrders/SearchForm_popup_query_form.tpl', 35, false),array('function', 'sugar_translate', 'cache/modules/P_CustomOrders/SearchForm_popup_query_form.tpl', 44, false),array('function', 'html_options', 'cache/modules/P_CustomOrders/SearchForm_popup_query_form.tpl', 84, false),array('function', 'sugar_getimage', 'cache/modules/P_CustomOrders/SearchForm_popup_query_form.tpl', 97, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('function', 'counter', 'cache/modules/P_CustomProducts/SearchForm_popup_query_form.tpl', 26, false),array('function', 'math', 'cache/modules/P_CustomProducts/SearchForm_popup_query_form.tpl', 27, false),array('function', 'sugar_getimagepath', 'cache/modules/P_CustomProducts/SearchForm_popup_query_form.tpl', 35, false),array('function', 'sugar_translate', 'cache/modules/P_CustomProducts/SearchForm_popup_query_form.tpl', 44, false),array('function', 'html_options', 'cache/modules/P_CustomProducts/SearchForm_popup_query_form.tpl', 84, false),array('function', 'sugar_getimage', 'cache/modules/P_CustomProducts/SearchForm_popup_query_form.tpl', 97, false),)), $this); ?>
 
 <script>
 <?php echo '
@@ -47,7 +47,7 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'counter', '
 	<?php endif; ?>
 	
 	<td scope="row" nowrap="nowrap" width='10%' >
-			<label for='name_advanced'><?php echo smarty_function_sugar_translate(array('label' => 'LBL_NAME','module' => 'P_CustomOrders'), $this);?>
+			<label for='name_advanced'><?php echo smarty_function_sugar_translate(array('label' => 'LBL_NAME','module' => 'P_CustomProducts'), $this);?>
 </label>
 		</td>
 	<td  nowrap="nowrap" width='30%'>
@@ -84,7 +84,7 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'counter', '
 	
 	<td scope="row" nowrap="nowrap" width='10%' >
 		
-		<label for='assigned_user_id_advanced'><?php echo smarty_function_sugar_translate(array('label' => 'LBL_ASSIGNED_TO','module' => 'P_CustomOrders'), $this);?>
+		<label for='assigned_user_id_advanced'><?php echo smarty_function_sugar_translate(array('label' => 'LBL_ASSIGNED_TO','module' => 'P_CustomProducts'), $this);?>
 </label>
     	</td>
 	<td  nowrap="nowrap" width='30%'>
@@ -193,4 +193,4 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'counter', '
 	}
 '; ?>
 	
-</script><?php echo '<script language="javascript">if(typeof sqs_objects == \'undefined\'){var sqs_objects = new Array;}sqs_objects[\'popup_query_form_modified_by_name_advanced\']={"form":"popup_query_form","method":"get_user_array","field_list":["user_name","id"],"populate_list":["modified_by_name_advanced","modified_user_id_advanced"],"required_list":["modified_user_id"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};sqs_objects[\'popup_query_form_created_by_name_advanced\']={"form":"popup_query_form","method":"get_user_array","field_list":["user_name","id"],"populate_list":["created_by_name_advanced","created_by_advanced"],"required_list":["created_by"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};sqs_objects[\'popup_query_form_assigned_user_name_advanced\']={"form":"popup_query_form","method":"get_user_array","field_list":["user_name","id"],"populate_list":["assigned_user_name_advanced","assigned_user_id_advanced"],"required_list":["assigned_user_id"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};sqs_objects[\'popup_query_form_product_order_c_advanced\']={"form":"popup_query_form","method":"query","modules":["P_CustomProducts"],"group":"or","field_list":["name","id"],"populate_list":["product_order_c_advanced","p_customproducts_id_c_advanced"],"required_list":["parent_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"order":"name","limit":"30","no_match_text":"No Match"};</script>'; ?>
+</script><?php echo '<script language="javascript">if(typeof sqs_objects == \'undefined\'){var sqs_objects = new Array;}sqs_objects[\'popup_query_form_modified_by_name_advanced\']={"form":"popup_query_form","method":"get_user_array","field_list":["user_name","id"],"populate_list":["modified_by_name_advanced","modified_user_id_advanced"],"required_list":["modified_user_id"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};sqs_objects[\'popup_query_form_created_by_name_advanced\']={"form":"popup_query_form","method":"get_user_array","field_list":["user_name","id"],"populate_list":["created_by_name_advanced","created_by_advanced"],"required_list":["created_by"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};sqs_objects[\'popup_query_form_assigned_user_name_advanced\']={"form":"popup_query_form","method":"get_user_array","field_list":["user_name","id"],"populate_list":["assigned_user_name_advanced","assigned_user_id_advanced"],"required_list":["assigned_user_id"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};</script>'; ?>

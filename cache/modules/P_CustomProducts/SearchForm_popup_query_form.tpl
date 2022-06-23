@@ -1,7 +1,3 @@
-<?php /* Smarty version 2.6.11, created on 2022-06-23 05:40:22
-         compiled from include/SearchForm/tpls/SearchFormGenericAdvanced.tpl */ ?>
-<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'math', 'include/SearchForm/tpls/SearchFormGenericAdvanced.tpl', 25, false),array('function', 'sugar_field', 'include/SearchForm/tpls/SearchFormGenericAdvanced.tpl', 56, false),)), $this); ?>
 
 <script>
 {literal}
@@ -24,15 +20,8 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'math', 'inc
 </script>
 <table width="100%" cellspacing="0" cellpadding="0" border="0">
 <tr>
-<?php $this->assign('accesskeycount', 0); ?>  <?php $this->assign('ACCKEY', '');  $_from = $this->_tpl_vars['formData']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array'); }$this->_foreach['colIteration'] = array('total' => count($_from), 'iteration' => 0);
-if ($this->_foreach['colIteration']['total'] > 0):
-    foreach ($_from as $this->_tpl_vars['col'] => $this->_tpl_vars['colData']):
-        $this->_foreach['colIteration']['iteration']++;
-?>
-    <?php echo smarty_function_math(array('assign' => 'accesskeycount','equation' => ($this->_tpl_vars['accesskeycount'])." + 1"), $this);?>
-
-    <?php if ($this->_tpl_vars['accesskeycount'] == 1): ?> <?php $this->assign('ACCKEY', $this->_tpl_vars['APP']['LBL_FIRST_INPUT_SEARCH_KEY']); ?> <?php else: ?> <?php $this->assign('ACCKEY', ''); ?> <?php endif; ?>
-
+      
+      
 	
 	{counter assign=index}
 	{math equation="left % right"
@@ -52,28 +41,50 @@ if ($this->_foreach['colIteration']['total'] > 0):
 		</tr><tr>
 	{/if}
 	
-	<td scope="row" nowrap="nowrap" width='<?php echo $this->_tpl_vars['templateMeta']['widths']['label']; ?>
-%' >
-	<?php if (isset ( $this->_tpl_vars['colData']['field']['label'] )): ?>	
-		<label for='<?php echo $this->_tpl_vars['colData']['field']['name']; ?>
-'>{sugar_translate label='<?php echo $this->_tpl_vars['colData']['field']['label']; ?>
-' module='<?php echo $this->_tpl_vars['module']; ?>
-'}</label>
-    <?php elseif (isset ( $this->_tpl_vars['fields'][$this->_tpl_vars['colData']['field']['name']] )): ?>
-		<label for='<?php echo $this->_tpl_vars['fields'][$this->_tpl_vars['colData']['field']['name']]['name']; ?>
-'>{sugar_translate label='<?php echo $this->_tpl_vars['fields'][$this->_tpl_vars['colData']['field']['name']]['vname']; ?>
-' module='<?php echo $this->_tpl_vars['module']; ?>
-'}</label>
-	<?php endif; ?>
-	</td>
-	<td  nowrap="nowrap" width='<?php echo $this->_tpl_vars['templateMeta']['widths']['field']; ?>
-%'>
-	<?php if ($this->_tpl_vars['fields'][$this->_tpl_vars['colData']['field']['name']]): ?>
-		<?php echo smarty_function_sugar_field(array('parentFieldArray' => 'fields','accesskey' => $this->_tpl_vars['ACCKEY'],'vardef' => $this->_tpl_vars['fields'][$this->_tpl_vars['colData']['field']['name']],'displayType' => $this->_tpl_vars['displayType'],'displayParams' => $this->_tpl_vars['colData']['field']['displayParams'],'typeOverride' => $this->_tpl_vars['colData']['field']['type'],'formName' => $this->_tpl_vars['form_name']), $this);?>
-
-   	<?php endif; ?>
-   	</td>
-<?php endforeach; endif; unset($_from); ?>
+	<td scope="row" nowrap="nowrap" width='10%' >
+			<label for='name_advanced'>{sugar_translate label='LBL_NAME' module='P_CustomProducts'}</label>
+		</td>
+	<td  nowrap="nowrap" width='30%'>
+			
+{if strlen($fields.name_advanced.value) <= 0}
+{assign var="value" value=$fields.name_advanced.default_value }
+{else}
+{assign var="value" value=$fields.name_advanced.value }
+{/if}  
+<input type='text' name='{$fields.name_advanced.name}' 
+    id='{$fields.name_advanced.name}' size='30' 
+    maxlength='255' 
+    value='{$value}' title=''      accesskey='9'  >
+   	   	</td>
+    
+      
+	
+	{counter assign=index}
+	{math equation="left % right"
+   		  left=$index
+          right=$templateMeta.maxColumns
+          assign=modVal
+    }
+	{if ($index % $templateMeta.maxColumns == 1 && $index != 1)}
+        {if $isHelperShown==0}
+            {assign var="isHelperShown" value="1"}
+            <td class="helpIcon" width="*">
+                <img alt="{$APP.LBL_SEARCH_HELP_TITLE}" id="helper_popup_image" border="0" src='{sugar_getimagepath file="help-dashlet.gif"}' class="help-search">
+            </td>
+        {else}
+            <td>&nbsp;</td>
+        {/if}
+		</tr><tr>
+	{/if}
+	
+	<td scope="row" nowrap="nowrap" width='10%' >
+		
+		<label for='assigned_user_id_advanced'>{sugar_translate label='LBL_ASSIGNED_TO' module='P_CustomProducts'}</label>
+    	</td>
+	<td  nowrap="nowrap" width='30%'>
+			
+{html_options id='assigned_user_id_advanced' name='assigned_user_id_advanced[]' options=$fields.assigned_user_id_advanced.options size="6" style="width: 150px" multiple="1" selected=$fields.assigned_user_id_advanced.value}
+   	   	</td>
 	</tr>
 <tr>
 	<td colspan='20'>
@@ -147,4 +158,4 @@ if ($this->_foreach['colIteration']['total'] > 0):
 		loadSSL_Scripts();
 	}
 {/literal}	
-</script>
+</script>{literal}<script language="javascript">if(typeof sqs_objects == 'undefined'){var sqs_objects = new Array;}sqs_objects['popup_query_form_modified_by_name_advanced']={"form":"popup_query_form","method":"get_user_array","field_list":["user_name","id"],"populate_list":["modified_by_name_advanced","modified_user_id_advanced"],"required_list":["modified_user_id"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};sqs_objects['popup_query_form_created_by_name_advanced']={"form":"popup_query_form","method":"get_user_array","field_list":["user_name","id"],"populate_list":["created_by_name_advanced","created_by_advanced"],"required_list":["created_by"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};sqs_objects['popup_query_form_assigned_user_name_advanced']={"form":"popup_query_form","method":"get_user_array","field_list":["user_name","id"],"populate_list":["assigned_user_name_advanced","assigned_user_id_advanced"],"required_list":["assigned_user_id"],"conditions":[{"name":"user_name","op":"like_custom","end":"%","value":""}],"limit":"30","no_match_text":"No Match"};</script>{/literal}

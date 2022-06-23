@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.11, created on 2022-06-22 20:02:45
+<?php /* Smarty version 2.6.11, created on 2022-06-23 05:40:08
          compiled from themes/Sugar5/tpls/_globalLinks.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_getimage', 'themes/Sugar5/tpls/_globalLinks.tpl', 46, false),)), $this); ?>
