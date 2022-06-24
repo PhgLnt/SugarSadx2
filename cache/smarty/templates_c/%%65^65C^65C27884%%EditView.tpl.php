@@ -1,7 +1,7 @@
-<?php /* Smarty version 2.6.11, created on 2022-06-23 17:03:59
-         compiled from cache/modules/P_CustomOrders/EditView.tpl */ ?>
+<?php /* Smarty version 2.6.11, created on 2022-06-24 05:16:34
+         compiled from cache/modules/P_Something/EditView.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'cache/modules/P_CustomOrders/EditView.tpl', 38, false),array('modifier', 'strip_semicolon', 'cache/modules/P_CustomOrders/EditView.tpl', 57, false),array('function', 'sugar_include', 'cache/modules/P_CustomOrders/EditView.tpl', 44, false),array('function', 'counter', 'cache/modules/P_CustomOrders/EditView.tpl', 50, false),array('function', 'sugar_translate', 'cache/modules/P_CustomOrders/EditView.tpl', 56, false),array('function', 'sugar_getimagepath', 'cache/modules/P_CustomOrders/EditView.tpl', 108, false),array('function', 'sugar_number_format', 'cache/modules/P_CustomOrders/EditView.tpl', 135, false),)), $this); ?>
+smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'cache/modules/P_Something/EditView.tpl', 38, false),array('modifier', 'strip_semicolon', 'cache/modules/P_Something/EditView.tpl', 57, false),array('function', 'sugar_include', 'cache/modules/P_Something/EditView.tpl', 44, false),array('function', 'counter', 'cache/modules/P_Something/EditView.tpl', 50, false),array('function', 'sugar_translate', 'cache/modules/P_Something/EditView.tpl', 56, false),array('function', 'sugar_number_format', 'cache/modules/P_Something/EditView.tpl', 100, false),)), $this); ?>
 
 
 <script>
@@ -66,7 +66,7 @@ $(node).sugarActionMenu();
 '); return false;" type="button" name="button" value="<?php echo $this->_tpl_vars['APP']['LBL_CANCEL_BUTTON_LABEL']; ?>
 " id="CANCEL_HEADER"> <?php elseif (empty ( $_REQUEST['return_action'] ) || empty ( $_REQUEST['return_id'] ) && ! empty ( $this->_tpl_vars['fields']['id']['value'] )): ?><input title="<?php echo $this->_tpl_vars['APP']['LBL_CANCEL_BUTTON_TITLE']; ?>
 " accessKey="<?php echo $this->_tpl_vars['APP']['LBL_CANCEL_BUTTON_KEY']; ?>
-" class="button" onclick="SUGAR.ajaxUI.loadContent('index.php?action=index&module=P_CustomOrders'); return false;" type="button" name="button" value="<?php echo $this->_tpl_vars['APP']['LBL_CANCEL_BUTTON_LABEL']; ?>
+" class="button" onclick="SUGAR.ajaxUI.loadContent('index.php?action=index&module=P_Something'); return false;" type="button" name="button" value="<?php echo $this->_tpl_vars['APP']['LBL_CANCEL_BUTTON_LABEL']; ?>
 " id="CANCEL_HEADER"> <?php else: ?><input title="<?php echo $this->_tpl_vars['APP']['LBL_CANCEL_BUTTON_TITLE']; ?>
 " accessKey="<?php echo $this->_tpl_vars['APP']['LBL_CANCEL_BUTTON_KEY']; ?>
 " class="button" onclick="SUGAR.ajaxUI.loadContent('index.php?action=index&module=<?php echo ((is_array($_tmp=$_REQUEST['return_module'])) ? $this->_run_mod_handler('escape', true, $_tmp, 'url') : smarty_modifier_escape($_tmp, 'url')); ?>
@@ -74,7 +74,7 @@ $(node).sugarActionMenu();
 '); return false;" type="button" name="button" value="<?php echo $this->_tpl_vars['APP']['LBL_CANCEL_BUTTON_LABEL']; ?>
 " id="CANCEL_HEADER"> <?php endif; ?> <?php if ($this->_tpl_vars['bean']->aclAccess('detail')):  if (! empty ( $this->_tpl_vars['fields']['id']['value'] ) && $this->_tpl_vars['isAuditEnabled']): ?><input id="btn_view_change_log" title="<?php echo $this->_tpl_vars['APP']['LNK_VIEW_CHANGE_LOG']; ?>
 " class="button" onclick='open_popup("Audit", "600", "400", "&record=<?php echo $this->_tpl_vars['fields']['id']['value']; ?>
-&module_name=P_CustomOrders", true, false,  { "call_back_function":"set_return","form_name":"EditView","field_to_name_array":[] } ); return false;' type="button" value="<?php echo $this->_tpl_vars['APP']['LNK_VIEW_CHANGE_LOG']; ?>
+&module_name=P_Something", true, false,  { "call_back_function":"set_return","form_name":"EditView","field_to_name_array":[] } ); return false;' type="button" value="<?php echo $this->_tpl_vars['APP']['LNK_VIEW_CHANGE_LOG']; ?>
 "><?php endif;  endif; ?><div class="clear"></div></div>
 </td>
 <td align='right'>
@@ -98,7 +98,7 @@ _Subpanel'  class="yui3-skin-sam edit view panelContainer">
 <?php ob_start(); ?>
 <tr>
 <td valign="top" id='name_label' width='12.5%' scope="col">
-<?php ob_start();  echo smarty_function_sugar_translate(array('label' => 'LBL_NAME','module' => 'P_CustomOrders'), $this); $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean();  echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+<?php ob_start();  echo smarty_function_sugar_translate(array('label' => 'LBL_NAME','module' => 'P_Something'), $this); $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean();  echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
 :
 <span class="required">*</span>
 </td>
@@ -124,8 +124,8 @@ value='<?php echo $this->_tpl_vars['value']; ?>
 
 <?php ob_start(); ?>
 <tr>
-<td valign="top" id='product_order_c_label' width='12.5%' scope="col">
-<?php ob_start();  echo smarty_function_sugar_translate(array('label' => 'LBL_PRODUCT_ORDER','module' => 'P_CustomOrders'), $this); $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean();  echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+<td valign="top" id='discount_number_c_label' width='12.5%' scope="col">
+<?php ob_start();  echo smarty_function_sugar_translate(array('label' => 'LBL_DISCOUNT_NUMBER','module' => 'P_Something'), $this); $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean();  echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
 :
 <span class="required">*</span>
 </td>
@@ -136,76 +136,33 @@ value='<?php echo $this->_tpl_vars['value']; ?>
 <?php echo smarty_function_counter(array('name' => 'panelFieldCount'), $this);?>
 
 
-<input type="text" name="<?php echo $this->_tpl_vars['fields']['product_order_c']['name']; ?>
-" class="sqsEnabled" tabindex="0" id="<?php echo $this->_tpl_vars['fields']['product_order_c']['name']; ?>
-" size="" value="<?php echo $this->_tpl_vars['fields']['product_order_c']['value']; ?>
-" title='' autocomplete="off"  	 >
-<input type="hidden" name="<?php echo $this->_tpl_vars['fields']['product_order_c']['id_name']; ?>
-" 
-id="<?php echo $this->_tpl_vars['fields']['product_order_c']['id_name']; ?>
-" 
-value="<?php echo $this->_tpl_vars['fields']['p_customproducts_id_c']['value']; ?>
-">
-<span class="id-ff multiple">
-<button type="button" name="btn_<?php echo $this->_tpl_vars['fields']['product_order_c']['name']; ?>
-" id="btn_<?php echo $this->_tpl_vars['fields']['product_order_c']['name']; ?>
-" tabindex="0" title="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SELECT_BUTTON_TITLE'), $this);?>
-" class="button firstChild" value="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SELECT_BUTTON_LABEL'), $this);?>
-"
-onclick='open_popup(
-"<?php echo $this->_tpl_vars['fields']['product_order_c']['module']; ?>
-", 
-600, 
-400, 
-"", 
-true, 
-false, 
-<?php echo '{"call_back_function":"set_return","form_name":"EditView","field_to_name_array":{"id":"p_customproducts_id_c","name":"product_order_c"}}'; ?>
-, 
-"single", 
-true
-);' ><img src="<?php echo smarty_function_sugar_getimagepath(array('file' => "id-ff-select.png"), $this);?>
-"></button><button type="button" name="btn_clr_<?php echo $this->_tpl_vars['fields']['product_order_c']['name']; ?>
-" id="btn_clr_<?php echo $this->_tpl_vars['fields']['product_order_c']['name']; ?>
-" tabindex="0" title="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_CLEAR_RELATE_TITLE'), $this);?>
-"  class="button lastChild"
-onclick="SUGAR.clearRelateField(this.form, '<?php echo $this->_tpl_vars['fields']['product_order_c']['name']; ?>
-', '<?php echo $this->_tpl_vars['fields']['product_order_c']['id_name']; ?>
-');"  value="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_CLEAR_RELATE_LABEL'), $this);?>
-" ><img src="<?php echo smarty_function_sugar_getimagepath(array('file' => "id-ff-clear.png"), $this);?>
-"></button>
-</span>
-<script type="text/javascript">
-SUGAR.util.doWhen(
-		"typeof(sqs_objects) != 'undefined' && typeof(sqs_objects['<?php echo $this->_tpl_vars['form_name']; ?>
-_<?php echo $this->_tpl_vars['fields']['product_order_c']['name']; ?>
-']) != 'undefined'",
-		enableQS
-);
-</script>
-<td valign="top" id='quantity_c_label' width='12.5%' scope="col">
-<?php ob_start();  echo smarty_function_sugar_translate(array('label' => 'LBL_QUANTITY','module' => 'P_CustomOrders'), $this); $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean();  echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
-:
-<span class="required">*</span>
-</td>
-<?php echo smarty_function_counter(array('name' => 'fieldsUsed'), $this);?>
-
-
-<td valign="top" width='37.5%' >
-<?php echo smarty_function_counter(array('name' => 'panelFieldCount'), $this);?>
-
-
-<?php if (strlen ( $this->_tpl_vars['fields']['quantity_c']['value'] ) <= 0):  $this->assign('value', $this->_tpl_vars['fields']['quantity_c']['default_value']);  else:  $this->assign('value', $this->_tpl_vars['fields']['quantity_c']['value']);  endif; ?>  
-<input type='text' name='<?php echo $this->_tpl_vars['fields']['quantity_c']['name']; ?>
+<?php if (strlen ( $this->_tpl_vars['fields']['discount_number_c']['value'] ) <= 0):  $this->assign('value', $this->_tpl_vars['fields']['discount_number_c']['default_value']);  else:  $this->assign('value', $this->_tpl_vars['fields']['discount_number_c']['value']);  endif; ?>  
+<input type='text' name='<?php echo $this->_tpl_vars['fields']['discount_number_c']['name']; ?>
 '
-id='<?php echo $this->_tpl_vars['fields']['quantity_c']['name']; ?>
+id='<?php echo $this->_tpl_vars['fields']['discount_number_c']['name']; ?>
 '
 size='30'
-maxlength='18'value='<?php echo smarty_function_sugar_number_format(array('var' => $this->_tpl_vars['value'],'precision' => 0), $this);?>
+maxlength='18'value='<?php echo smarty_function_sugar_number_format(array('var' => $this->_tpl_vars['value'],'precision' => 2), $this);?>
 '
 title=''
 tabindex='0'
 >
+<td valign="top" id='date_entered_label' width='12.5%' scope="col">
+<?php ob_start();  echo smarty_function_sugar_translate(array('label' => 'LBL_DATE_ENTERED','module' => 'P_Something'), $this); $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean();  echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
+</td>
+<?php echo smarty_function_counter(array('name' => 'fieldsUsed'), $this);?>
+
+
+<td valign="top" width='37.5%' >
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount'), $this);?>
+
+
+
+<?php if (strlen ( $this->_tpl_vars['fields']['date_entered']['value'] ) <= 0):  $this->assign('value', $this->_tpl_vars['fields']['date_entered']['default_value']);  else:  $this->assign('value', $this->_tpl_vars['fields']['date_entered']['value']);  endif; ?>
+<span class="sugar_field" id="<?php echo $this->_tpl_vars['fields']['date_entered']['name']; ?>
+"><?php echo $this->_tpl_vars['value']; ?>
+</span>
 </tr>
 <?php $this->_smarty_vars['capture']['tr'] = ob_get_contents();  $this->assign('tableRow', ob_get_contents());ob_end_clean();  if ($this->_tpl_vars['fieldsUsed'] > 0):  echo $this->_tpl_vars['tableRow']; ?>
 
@@ -214,7 +171,7 @@ tabindex='0'
 <?php ob_start(); ?>
 <tr>
 <td valign="top" id='description_label' width='12.5%' scope="col">
-<?php ob_start();  echo smarty_function_sugar_translate(array('label' => 'LBL_DESCRIPTION','module' => 'P_CustomOrders'), $this); $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean();  echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+<?php ob_start();  echo smarty_function_sugar_translate(array('label' => 'LBL_DESCRIPTION','module' => 'P_Something'), $this); $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean();  echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
 :
 </td>
 <?php echo smarty_function_counter(array('name' => 'fieldsUsed'), $this);?>
@@ -272,7 +229,7 @@ title='' tabindex="0"
 '); return false;" type="button" name="button" value="<?php echo $this->_tpl_vars['APP']['LBL_CANCEL_BUTTON_LABEL']; ?>
 " id="CANCEL_FOOTER"> <?php elseif (empty ( $_REQUEST['return_action'] ) || empty ( $_REQUEST['return_id'] ) && ! empty ( $this->_tpl_vars['fields']['id']['value'] )): ?><input title="<?php echo $this->_tpl_vars['APP']['LBL_CANCEL_BUTTON_TITLE']; ?>
 " accessKey="<?php echo $this->_tpl_vars['APP']['LBL_CANCEL_BUTTON_KEY']; ?>
-" class="button" onclick="SUGAR.ajaxUI.loadContent('index.php?action=index&module=P_CustomOrders'); return false;" type="button" name="button" value="<?php echo $this->_tpl_vars['APP']['LBL_CANCEL_BUTTON_LABEL']; ?>
+" class="button" onclick="SUGAR.ajaxUI.loadContent('index.php?action=index&module=P_Something'); return false;" type="button" name="button" value="<?php echo $this->_tpl_vars['APP']['LBL_CANCEL_BUTTON_LABEL']; ?>
 " id="CANCEL_FOOTER"> <?php else: ?><input title="<?php echo $this->_tpl_vars['APP']['LBL_CANCEL_BUTTON_TITLE']; ?>
 " accessKey="<?php echo $this->_tpl_vars['APP']['LBL_CANCEL_BUTTON_KEY']; ?>
 " class="button" onclick="SUGAR.ajaxUI.loadContent('index.php?action=index&module=<?php echo ((is_array($_tmp=$_REQUEST['return_module'])) ? $this->_run_mod_handler('escape', true, $_tmp, 'url') : smarty_modifier_escape($_tmp, 'url')); ?>
@@ -280,7 +237,7 @@ title='' tabindex="0"
 '); return false;" type="button" name="button" value="<?php echo $this->_tpl_vars['APP']['LBL_CANCEL_BUTTON_LABEL']; ?>
 " id="CANCEL_FOOTER"> <?php endif; ?> <?php if ($this->_tpl_vars['bean']->aclAccess('detail')):  if (! empty ( $this->_tpl_vars['fields']['id']['value'] ) && $this->_tpl_vars['isAuditEnabled']): ?><input id="btn_view_change_log" title="<?php echo $this->_tpl_vars['APP']['LNK_VIEW_CHANGE_LOG']; ?>
 " class="button" onclick='open_popup("Audit", "600", "400", "&record=<?php echo $this->_tpl_vars['fields']['id']['value']; ?>
-&module_name=P_CustomOrders", true, false,  { "call_back_function":"set_return","form_name":"EditView","field_to_name_array":[] } ); return false;' type="button" value="<?php echo $this->_tpl_vars['APP']['LNK_VIEW_CHANGE_LOG']; ?>
+&module_name=P_Something", true, false,  { "call_back_function":"set_return","form_name":"EditView","field_to_name_array":[] } ); return false;' type="button" value="<?php echo $this->_tpl_vars['APP']['LNK_VIEW_CHANGE_LOG']; ?>
 "><?php endif;  endif; ?><div class="clear"></div></div>
 </div>
 </form>
@@ -301,22 +258,18 @@ $(document).ready(function() {
 }
 </script><?php echo '
 <script type="text/javascript">
-addForm(\'EditView\');addToValidate(\'EditView\', \'name\', \'name\', true,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_NAME','module' => 'P_CustomOrders','for_js' => true), $this); echo '\' );
+addForm(\'EditView\');addToValidate(\'EditView\', \'name\', \'name\', true,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_NAME','module' => 'P_Something','for_js' => true), $this); echo '\' );
 addToValidate(\'EditView\', \'date_entered_date\', \'date\', false,\'Date Created\' );
 addToValidate(\'EditView\', \'date_modified_date\', \'date\', false,\'Date Modified\' );
-addToValidate(\'EditView\', \'modified_user_id\', \'assigned_user_name\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_MODIFIED','module' => 'P_CustomOrders','for_js' => true), $this); echo '\' );
-addToValidate(\'EditView\', \'modified_by_name\', \'relate\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_MODIFIED_NAME','module' => 'P_CustomOrders','for_js' => true), $this); echo '\' );
-addToValidate(\'EditView\', \'created_by\', \'assigned_user_name\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_CREATED','module' => 'P_CustomOrders','for_js' => true), $this); echo '\' );
-addToValidate(\'EditView\', \'created_by_name\', \'relate\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_CREATED','module' => 'P_CustomOrders','for_js' => true), $this); echo '\' );
-addToValidate(\'EditView\', \'description\', \'text\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_DESCRIPTION','module' => 'P_CustomOrders','for_js' => true), $this); echo '\' );
-addToValidate(\'EditView\', \'deleted\', \'bool\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_DELETED','module' => 'P_CustomOrders','for_js' => true), $this); echo '\' );
-addToValidate(\'EditView\', \'assigned_user_id\', \'relate\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_ASSIGNED_TO_ID','module' => 'P_CustomOrders','for_js' => true), $this); echo '\' );
-addToValidate(\'EditView\', \'assigned_user_name\', \'relate\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_ASSIGNED_TO_NAME','module' => 'P_CustomOrders','for_js' => true), $this); echo '\' );
-addToValidate(\'EditView\', \'product_order_c\', \'relate\', true,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_PRODUCT_ORDER','module' => 'P_CustomOrders','for_js' => true), $this); echo '\' );
-addToValidate(\'EditView\', \'quantity_c\', \'decimal\', true,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_QUANTITY','module' => 'P_CustomOrders','for_js' => true), $this); echo '\' );
-addToValidate(\'EditView\', \'total_price_c\', \'decimal\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_TOTAL_PRICE','module' => 'P_CustomOrders','for_js' => true), $this); echo '\' );
-addToValidate(\'EditView\', \'unit_price_c\', \'decimal\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_UNIT_PRICE','module' => 'P_CustomOrders','for_js' => true), $this); echo '\' );
-addToValidate(\'EditView\', \'p_customproducts_id_c\', \'id\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_PRODUCT_ORDER_P_CUSTOMPRODUCTS_ID','module' => 'P_CustomOrders','for_js' => true), $this); echo '\' );
-addToValidateBinaryDependency(\'EditView\', \'assigned_user_name\', \'alpha\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'ERR_SQS_NO_MATCH_FIELD','module' => 'P_CustomOrders','for_js' => true), $this); echo ': ';  echo smarty_function_sugar_translate(array('label' => 'LBL_ASSIGNED_TO','module' => 'P_CustomOrders','for_js' => true), $this); echo '\', \'assigned_user_id\' );
-addToValidateBinaryDependency(\'EditView\', \'product_order_c\', \'alpha\', true,\'';  echo smarty_function_sugar_translate(array('label' => 'ERR_SQS_NO_MATCH_FIELD','module' => 'P_CustomOrders','for_js' => true), $this); echo ': ';  echo smarty_function_sugar_translate(array('label' => 'LBL_PRODUCT_ORDER','module' => 'P_CustomOrders','for_js' => true), $this); echo '\', \'p_customproducts_id_c\' );
-</script><script language="javascript">if(typeof sqs_objects == \'undefined\'){var sqs_objects = new Array;}sqs_objects[\'EditView_product_order_c\']={"form":"EditView","method":"query","modules":["P_CustomProducts"],"group":"or","field_list":["name","id"],"populate_list":["product_order_c","p_customproducts_id_c"],"required_list":["parent_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"order":"name","limit":"30","no_match_text":"No Match"};</script>'; ?>
+addToValidate(\'EditView\', \'modified_user_id\', \'assigned_user_name\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_MODIFIED','module' => 'P_Something','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'modified_by_name\', \'relate\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_MODIFIED_NAME','module' => 'P_Something','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'created_by\', \'assigned_user_name\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_CREATED','module' => 'P_Something','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'created_by_name\', \'relate\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_CREATED','module' => 'P_Something','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'description\', \'text\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_DESCRIPTION','module' => 'P_Something','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'deleted\', \'bool\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_DELETED','module' => 'P_Something','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'assigned_user_id\', \'relate\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_ASSIGNED_TO_ID','module' => 'P_Something','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'assigned_user_name\', \'relate\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_ASSIGNED_TO_NAME','module' => 'P_Something','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'discount_number_c\', \'decimal\', true,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_DISCOUNT_NUMBER','module' => 'P_Something','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'voucher_code_c\', \'varchar\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_VOUCHER_CODE','module' => 'P_Something','for_js' => true), $this); echo '\' );
+addToValidateBinaryDependency(\'EditView\', \'assigned_user_name\', \'alpha\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'ERR_SQS_NO_MATCH_FIELD','module' => 'P_Something','for_js' => true), $this); echo ': ';  echo smarty_function_sugar_translate(array('label' => 'LBL_ASSIGNED_TO','module' => 'P_Something','for_js' => true), $this); echo '\', \'assigned_user_id\' );
+</script>'; ?>

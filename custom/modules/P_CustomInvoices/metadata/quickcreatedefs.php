@@ -55,17 +55,20 @@ array (
         ),
         2 => 
         array (
-        ),
-        3 => 
-        array (
           0 => 
+          array (
+            'name' => 'voucher_c',
+            'studio' => 'visible',
+            'label' => 'LBL_VOUCHER',
+          ),
+          1 => 
           array (
             'name' => 'date_entered',
             'comment' => 'Date record created',
             'label' => 'LBL_DATE_ENTERED',
           ),
         ),
-        4 => 
+        3 => 
         array (
           0 => 
           array (

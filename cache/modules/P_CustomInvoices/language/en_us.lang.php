@@ -1,8 +1,6 @@
 <?php
-// created: 2022-06-23 18:02:50
+// created: 2022-06-24 05:21:00
 $mod_strings = array (
-  'LBL_ASSIGNED_TO_ID' => 'Assigned User Id',
-  'LBL_ASSIGNED_TO_NAME' => 'Assigned to',
   'LBL_ID' => 'ID',
   'LBL_DATE_ENTERED' => 'Date Created',
   'LBL_DATE_MODIFIED' => 'Date Modified',
@@ -19,6 +17,8 @@ $mod_strings = array (
   'LBL_LIST_NAME' => 'Name',
   'LBL_EDIT_BUTTON' => 'Edit',
   'LBL_REMOVE' => 'Remove',
+  'LBL_ASSIGNED_TO_ID' => 'Assigned User Id',
+  'LBL_ASSIGNED_TO_NAME' => 'Assigned to',
   'LBL_LIST_FORM_TITLE' => 'CustomInvoices List',
   'LBL_MODULE_NAME' => 'CustomInvoices',
   'LBL_MODULE_TITLE' => 'CustomInvoices',
@@ -47,4 +47,6 @@ $mod_strings = array (
   'LBL_EDITVIEW_PANEL1' => 'New Panel 1',
   'LBL_ORDER_PRICE' => 'Order Price',
   'LBL_TOTAL_DISCOUNT' => 'Total Discount',
+  'LBL_VOUCHER_P_SOMETHING_ID' => 'Voucher (related Voucher ID)',
+  'LBL_VOUCHER' => 'Voucher',
 );

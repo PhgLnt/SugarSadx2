@@ -38,6 +38,10 @@ $dictionary['P_CustomInvoices']['fields']['order_price_c']['labelValue']='Order 
 
  
 
+ // created: 2022-06-24 05:20:58
+
+ 
+
  // created: 2022-06-23 17:51:46
 $dictionary['P_CustomInvoices']['fields']['total_discount_c']['labelValue']='Total Discount';
 
@@ -45,6 +49,11 @@ $dictionary['P_CustomInvoices']['fields']['total_discount_c']['labelValue']='Tot
 
  // created: 2022-06-23 17:54:30
 $dictionary['P_CustomInvoices']['fields']['total_price_c']['labelValue']='Total Price';
+
+ 
+
+ // created: 2022-06-24 05:20:59
+$dictionary['P_CustomInvoices']['fields']['voucher_c']['labelValue']='Voucher';
 
  
 ?>

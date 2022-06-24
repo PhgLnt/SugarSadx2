@@ -1,5 +1,5 @@
 <?php
-// created: 2022-06-23 16:50:41
+// created: 2022-06-24 05:16:08
 $mod_strings = array (
   'LBL_ID' => 'ID',
   'LBL_DATE_ENTERED' => 'Date Created',
@@ -9,9 +9,9 @@ $mod_strings = array (
   'LBL_MODIFIED_NAME' => 'Modified By Name',
   'LBL_CREATED' => 'Created By',
   'LBL_CREATED_ID' => 'Created By Id',
-  'LBL_DESCRIPTION' => 'Description',
+  'LBL_DESCRIPTION' => 'Note',
   'LBL_DELETED' => 'Deleted',
-  'LBL_NAME' => 'Name',
+  'LBL_NAME' => 'Voucher Name',
   'LBL_CREATED_USER' => 'Created by User',
   'LBL_MODIFIED_USER' => 'Modified by User',
   'LBL_LIST_NAME' => 'Name',
@@ -19,16 +19,18 @@ $mod_strings = array (
   'LBL_REMOVE' => 'Remove',
   'LBL_ASSIGNED_TO_ID' => 'Assigned User Id',
   'LBL_ASSIGNED_TO_NAME' => 'Assigned to',
-  'LBL_LIST_FORM_TITLE' => 'Something List',
+  'LBL_LIST_FORM_TITLE' => 'Voucher List',
   'LBL_MODULE_NAME' => 'Something',
   'LBL_MODULE_TITLE' => 'Something',
-  'LBL_HOMEPAGE_TITLE' => 'My Something',
-  'LNK_NEW_RECORD' => 'Create Something',
-  'LNK_LIST' => 'View Something',
-  'LNK_IMPORT_P_SOMETHING' => 'Import Something',
-  'LBL_SEARCH_FORM_TITLE' => 'Search Something',
+  'LBL_HOMEPAGE_TITLE' => 'My Vouchers',
+  'LNK_NEW_RECORD' => 'Create Vouchers',
+  'LNK_LIST' => 'View Vouchers',
+  'LNK_IMPORT_P_SOMETHING' => 'Import Vouchers',
+  'LBL_SEARCH_FORM_TITLE' => 'Search Voucher',
   'LBL_HISTORY_SUBPANEL_TITLE' => 'View History',
   'LBL_ACTIVITIES_SUBPANEL_TITLE' => 'Activities',
   'LBL_P_SOMETHING_SUBPANEL_TITLE' => 'Something',
   'LBL_NEW_FORM_TITLE' => 'New Something',
+  'LBL_DISCOUNT_NUMBER' => 'Discount Number',
+  'LBL_VOUCHER_CODE' => 'Voucher Code',
 );

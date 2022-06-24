@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.11, created on 2022-06-23 17:08:00
+<?php /* Smarty version 2.6.11, created on 2022-06-24 05:20:34
          compiled from modules/DynamicFields/templates/Fields/Forms/relate.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'sugar_translate', 'modules/DynamicFields/templates/Fields/Forms/relate.tpl', 44, false),array('function', 'html_options', 'modules/DynamicFields/templates/Fields/Forms/relate.tpl', 47, false),)), $this); ?>

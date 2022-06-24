@@ -1,8 +1,5 @@
-<?php /* Smarty version 2.6.11, created on 2022-06-23 17:39:34
-         compiled from include/SugarFields/Fields/Bool/DetailView.tpl */ ?>
-<?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
-smarty_core_load_plugins(array('plugins' => array(array('function', 'sugarvar', 'include/SugarFields/Fields/Bool/DetailView.tpl', 38, false),array('function', 'sugarvar_connector', 'include/SugarFields/Fields/Bool/DetailView.tpl', 45, false),)), $this); ?>
-{*
+<?php
+if(!defined('sugarEntry') || !sugarEntry) die('Not A Valid Entry Point');
 /*********************************************************************************
  * SugarCRM Community Edition is a customer relationship management program developed by
  * SugarCRM, Inc. Copyright (C) 2004-2013 SugarCRM Inc.
@@ -38,19 +35,22 @@ smarty_core_load_plugins(array('plugins' => array(array('function', 'sugarvar', 
  * "Powered by SugarCRM".
  ********************************************************************************/
 
-*}
-{if strval(<?php echo smarty_function_sugarvar(array('key' => 'value','stringFormat' => 'false'), $this);?>
-) == "1" || strval(<?php echo smarty_function_sugarvar(array('key' => 'value','stringFormat' => 'false'), $this);?>
-) == "yes" || strval(<?php echo smarty_function_sugarvar(array('key' => 'value','stringFormat' => 'false'), $this);?>
-) == "on"} 
-{assign var="checked" value="CHECKED"}
-{else}
-{assign var="checked" value=""}
-{/if}
-<input type="checkbox" class="checkbox" name="<?php echo smarty_function_sugarvar(array('key' => 'name'), $this);?>
-" id="<?php echo smarty_function_sugarvar(array('key' => 'name'), $this);?>
-" value="<?php echo smarty_function_sugarvar(array('key' => 'value','stringFormat' => 'false'), $this);?>
-" disabled="true" {$checked}>
-<?php if (! empty ( $this->_tpl_vars['displayParams']['enableConnectors'] )):  echo smarty_function_sugarvar_connector(array('view' => 'DetailView'), $this);?>
- 
-<?php endif; ?>
+
+
+
+$module_name = 'P_Something';
+$listViewDefs[$module_name] = array(
+	'NAME' => array(
+		'width' => '32', 
+		'label' => 'LBL_NAME', 
+		'default' => true,
+        'link' => true),         
+	'ASSIGNED_USER_NAME' => array(
+		'width' => '9', 
+		'label' => 'LBL_ASSIGNED_TO_NAME',
+		'module' => 'Employees',
+        'id' => 'ASSIGNED_USER_ID',
+        'default' => true),
+	
+);
+?>

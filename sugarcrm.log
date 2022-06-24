@@ -33,3 +33,26 @@
 06/23/22 16:31:08 [12252][1][FATAL]  Fetch One Failed:SELECT 'price' as 'price' FROM p_customproducts WHERE 'name'=Chuck Taylor All Star 1970s - 162058 LIMIT 0,1: MySQL error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Taylor All Star 1970s - 162058 LIMIT 0,1' at line 1
 06/23/22 16:31:38 [12252][1][FATAL]  Query Failed: SELECT 'price' FROM p_customproducts WHERE 'name'=Chuck Taylor All Star 1970s - 162058 LIMIT 0,1: MySQL error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Taylor All Star 1970s - 162058 LIMIT 0,1' at line 1
 06/23/22 16:31:38 [12252][1][FATAL]  Fetch One Failed:SELECT 'price' FROM p_customproducts WHERE 'name'=Chuck Taylor All Star 1970s - 162058 LIMIT 0,1: MySQL error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Taylor All Star 1970s - 162058 LIMIT 0,1' at line 1
+06/24/22 05:06:34 [12252][1][FATAL] kbdocuments for case_kbdocuments failed to load
+
+06/24/22 05:06:35 [12252][1][FATAL] quotes for projects_quotes failed to load
+
+06/24/22 05:06:35 [12252][1][FATAL] holidays for users_holidays failed to load
+
+06/24/22 05:06:35 [12252][1][FATAL] project_resource for projects_users_resources failed to load
+
+06/24/22 05:06:35 [12252][1][FATAL] project_resource for projects_contacts_resources failed to load
+
+06/24/22 05:06:36 [12252][1][FATAL] holidays for users_holidays failed to load
+
+06/24/22 05:06:36 [12252][1][FATAL] project_resource for projects_users_resources failed to load
+
+06/24/22 05:06:36 [12252][1][FATAL] assigned_user_link for tracker_user_id failed to load
+
+06/24/22 05:06:36 [12252][1][FATAL] Class Connectors does not exist, unable to rename.
+06/24/22 05:06:36 [12252][1][FATAL] Class CustomFields does not exist, unable to rename.
+06/24/22 05:06:36 [12252][1][FATAL] Class Audit does not exist, unable to rename.
+06/24/22 05:06:37 [12252][1][FATAL] holidays for users_holidays failed to load
+
+06/24/22 05:06:37 [12252][1][FATAL] project_resource for projects_users_resources failed to load
+

@@ -1,5 +1,5 @@
 <?php
-// created: 2022-06-22 18:48:50
+// created: 2022-06-24 05:06:34
 $sugar_config = array (
   'admin_access_control' => false,
   'admin_export_only' => false,
@@ -221,7 +221,7 @@ $sugar_config = array (
     'timeout' => 86400,
   ),
   'js_custom_version' => 1,
-  'js_lang_version' => 2,
+  'js_lang_version' => 3,
   'languages' => 
   array (
     'en_us' => 'English (US)',
