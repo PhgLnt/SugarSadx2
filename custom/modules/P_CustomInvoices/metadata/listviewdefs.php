@@ -9,53 +9,60 @@ array (
     'default' => true,
     'link' => true,
   ),
-  'INVOICE_NUMBER_C' => 
+  'INVOICE_NUMBER' => 
   array (
     'type' => 'varchar',
-    'default' => true,
     'label' => 'LBL_INVOICE_NUMBER',
     'width' => '10%',
+    'default' => true,
   ),
-  'ORDER_NUMBER_C' => 
+  'ORDER_NAME_C' => 
   array (
     'type' => 'relate',
     'default' => true,
     'studio' => 'visible',
-    'label' => 'LBL_ORDER_NUMBER',
+    'label' => 'LBL_ORDER_NAME',
     'id' => 'P_CUSTOMORDERS_ID_C',
     'link' => true,
     'width' => '10%',
   ),
-  'CUS_INVOICE_C' => 
+  'CUSTOMER_INVOICE_C' => 
   array (
     'type' => 'relate',
     'default' => true,
     'studio' => 'visible',
-    'label' => 'LBL_CUS_INVOICE',
+    'label' => 'LBL_CUSTOMER_INVOICE',
     'id' => 'CONTACT_ID_C',
     'link' => true,
     'width' => '10%',
   ),
-  'ORDER_PRICE_C' => 
+  'ORDER_PRICE' => 
   array (
     'type' => 'decimal',
-    'default' => true,
     'label' => 'LBL_ORDER_PRICE',
     'width' => '10%',
+    'default' => true,
   ),
-  'TOTAL_DISCOUNT_C' => 
+  'TOTAL_DISCOUNT' => 
   array (
     'type' => 'decimal',
     'default' => true,
     'label' => 'LBL_TOTAL_DISCOUNT',
     'width' => '10%',
   ),
-  'TOTAL_PRICE_C' => 
+  'TOTAL_PRICE' => 
   array (
     'type' => 'decimal',
-    'default' => true,
     'label' => 'LBL_TOTAL_PRICE',
     'width' => '10%',
+    'default' => true,
+  ),
+  'DATE_ENTERED' => 
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_ENTERED',
+    'width' => '10%',
+    'default' => true,
   ),
   'DESCRIPTION' => 
   array (
@@ -74,19 +81,15 @@ array (
     'width' => '10%',
     'default' => false,
   ),
-  'DATE_ENTERED' => 
+  'VOUCHER_DISCOUNT_C' => 
   array (
-    'type' => 'datetime',
-    'label' => 'LBL_DATE_ENTERED',
-    'width' => '10%',
+    'type' => 'relate',
     'default' => false,
-  ),
-  'DATE_MODIFIED' => 
-  array (
-    'type' => 'datetime',
-    'label' => 'LBL_DATE_MODIFIED',
+    'studio' => 'visible',
+    'label' => 'LBL_VOUCHER_DISCOUNT',
+    'id' => 'P_CUSTOMVOUCHER_ID_C',
+    'link' => true,
     'width' => '10%',
-    'default' => false,
   ),
   'MODIFIED_BY_NAME' => 
   array (
@@ -94,6 +97,13 @@ array (
     'link' => true,
     'label' => 'LBL_MODIFIED_NAME',
     'id' => 'MODIFIED_USER_ID',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'DATE_MODIFIED' => 
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_MODIFIED',
     'width' => '10%',
     'default' => false,
   ),

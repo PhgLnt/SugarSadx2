@@ -37,19 +37,24 @@ array (
         0 => 
         array (
           0 => 'name',
+          1 => 
+          array (
+            'name' => 'date_entered',
+            'comment' => 'Date record created',
+            'label' => 'LBL_DATE_ENTERED',
+          ),
         ),
         1 => 
         array (
           0 => 
           array (
-            'name' => 'product_order_c',
-            'studio' => 'visible',
-            'label' => 'LBL_PRODUCT_ORDER',
+            'name' => 'order_status_c',
+            'label' => 'LBL_ORDER_STATUS',
           ),
           1 => 
           array (
-            'name' => 'quantity_c',
-            'label' => 'LBL_QUANTITY',
+            'name' => 'created_by_name',
+            'label' => 'LBL_CREATED',
           ),
         ),
         2 => 

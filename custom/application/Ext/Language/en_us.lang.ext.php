@@ -45,10 +45,13 @@ $app_list_strings['moduleList']['P_Order'] = 'CustomOrders';
 $app_list_strings['moduleList']['P_Orders'] = 'CustomOrders';
 $app_list_strings['moduleList']['P_Orders1'] = 'CustomSuppliers';
 $app_list_strings['moduleList']['P_Suppliers'] = 'Suppliers';
-$app_list_strings['moduleList']['P_Something'] = 'Something';
+$app_list_strings['moduleList']['P_Something'] = 'Voucher';
 $app_list_strings['moduleList']['P_CustomSuppliers'] = 'Suppliers';
 $app_list_strings['moduleList']['P_CustomProducts'] = 'Products';
-$app_list_strings['moduleList']['P_CustomInvoices'] = 'CustomInvoices';
+$app_list_strings['moduleList']['P_CustomInvoices'] = 'Invoices';
 $app_list_strings['moduleList']['P_CustomOrders'] = 'CustomOrders';
+$app_list_strings['moduleList']['P_Voucher'] = 'Voucher';
+$app_list_strings['moduleList']['P_CustomVoucher'] = 'Voucher';
+$app_list_strings['moduleList']['P_CustomOrdDetail'] = 'OrdDetail';
 
 ?>

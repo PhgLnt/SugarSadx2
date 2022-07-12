@@ -246,7 +246,7 @@
       'len' => '18',
       'size' => '20',
       'enable_range_search' => false,
-      'precision' => '2',
+      'precision' => '0',
     ),
   ),
   'relationships' => 

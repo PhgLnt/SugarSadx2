@@ -38,7 +38,7 @@ array (
           'newTab' => false,
           'panelDefault' => 'expanded',
         ),
-        'LBL_DETAILVIEW_PANEL1' => 
+        'LBL_DETAILVIEW_PANEL2' => 
         array (
           'newTab' => false,
           'panelDefault' => 'expanded',
@@ -54,7 +54,7 @@ array (
           0 => 'name',
           1 => 
           array (
-            'name' => 'invoice_number_c',
+            'name' => 'invoice_number',
             'label' => 'LBL_INVOICE_NUMBER',
           ),
         ),
@@ -62,22 +62,23 @@ array (
         array (
           0 => 
           array (
-            'name' => 'cus_invoice_c',
+            'name' => 'customer_invoice_c',
             'studio' => 'visible',
-            'label' => 'LBL_CUS_INVOICE',
+            'label' => 'LBL_CUSTOMER_INVOICE',
           ),
-          1 => 
-          array (
-            'name' => 'order_number_c',
-            'studio' => 'visible',
-            'label' => 'LBL_ORDER_NUMBER',
-          ),
+          1 => 'date_entered',
         ),
         2 => 
         array (
           0 => 
           array (
-            'name' => 'order_price_c',
+            'name' => 'order_name_c',
+            'studio' => 'visible',
+            'label' => 'LBL_ORDER_NAME',
+          ),
+          1 => 
+          array (
+            'name' => 'order_price',
             'label' => 'LBL_ORDER_PRICE',
           ),
         ),
@@ -85,13 +86,13 @@ array (
         array (
           0 => 
           array (
-            'name' => 'voucher_c',
+            'name' => 'voucher_discount_c',
             'studio' => 'visible',
-            'label' => 'LBL_VOUCHER',
+            'label' => 'LBL_VOUCHER_DISCOUNT',
           ),
           1 => 
           array (
-            'name' => 'total_discount_c',
+            'name' => 'total_discount',
             'label' => 'LBL_TOTAL_DISCOUNT',
           ),
         ),
@@ -99,25 +100,26 @@ array (
         array (
           0 => 
           array (
-            'name' => 'total_price_c',
+            'name' => 'total_price',
             'label' => 'LBL_TOTAL_PRICE',
           ),
         ),
       ),
-      'lbl_detailview_panel1' => 
+      'lbl_detailview_panel2' => 
       array (
         0 => 
         array (
-          0 => 'description',
+          0 => 
+          array (
+            'name' => 'product_information_c',
+            'label' => 'LBL_PRODUCT_INFORMATION',
+              'customCode' => '{include file="custom/modules/P_CustomInvoices/tpls/customProductInfo.tpl"}',
+              ),
         ),
         1 => 
         array (
-          0 => 
-          array (
-            'name' => 'created_by_name',
-            'label' => 'LBL_CREATED',
-          ),
-          1 => 'date_entered',
+          0 => 'description',
+          1 => '',
         ),
       ),
     ),

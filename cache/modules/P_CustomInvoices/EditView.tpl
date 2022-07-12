@@ -71,8 +71,8 @@ $(node).sugarActionMenu();
 id='{$fields.name.name}' size='30' 
 maxlength='255' 
 value='{$value}' title=''      accesskey='7'  >
-<td valign="top" id='cus_invoice_c_label' width='12.5%' scope="col">
-{capture name="label" assign="label"}{sugar_translate label='LBL_CUS_INVOICE' module='P_CustomInvoices'}{/capture}
+<td valign="top" id='order_name_c_label' width='12.5%' scope="col">
+{capture name="label" assign="label"}{sugar_translate label='LBL_ORDER_NAME' module='P_CustomInvoices'}{/capture}
 {$label|strip_semicolon}:
 <span class="required">*</span>
 </td>
@@ -81,71 +81,28 @@ value='{$value}' title=''      accesskey='7'  >
 <td valign="top" width='37.5%' >
 {counter name="panelFieldCount"}
 
-<input type="text" name="{$fields.cus_invoice_c.name}" class="sqsEnabled" tabindex="0" id="{$fields.cus_invoice_c.name}" size="" value="{$fields.cus_invoice_c.value}" title='' autocomplete="off"  	 >
-<input type="hidden" name="{$fields.cus_invoice_c.id_name}" 
-id="{$fields.cus_invoice_c.id_name}" 
-value="{$fields.contact_id_c.value}">
-<span class="id-ff multiple">
-<button type="button" name="btn_{$fields.cus_invoice_c.name}" id="btn_{$fields.cus_invoice_c.name}" tabindex="0" title="{sugar_translate label="LBL_ACCESSKEY_SELECT_CONTACTS_TITLE"}" class="button firstChild" value="{sugar_translate label="LBL_ACCESSKEY_SELECT_CONTACTS_LABEL"}"
-onclick='open_popup(
-"{$fields.cus_invoice_c.module}", 
-600, 
-400, 
-"", 
-true, 
-false, 
-{literal}{"call_back_function":"set_return","form_name":"EditView","field_to_name_array":{"id":"contact_id_c","name":"cus_invoice_c"}}{/literal}, 
-"single", 
-true
-);' ><img src="{sugar_getimagepath file="id-ff-select.png"}"></button><button type="button" name="btn_clr_{$fields.cus_invoice_c.name}" id="btn_clr_{$fields.cus_invoice_c.name}" tabindex="0" title="{sugar_translate label="LBL_ACCESSKEY_CLEAR_CONTACTS_TITLE"}"  class="button lastChild"
-onclick="SUGAR.clearRelateField(this.form, '{$fields.cus_invoice_c.name}', '{$fields.cus_invoice_c.id_name}');"  value="{sugar_translate label="LBL_ACCESSKEY_CLEAR_CONTACTS_LABEL"}" ><img src="{sugar_getimagepath file="id-ff-clear.png"}"></button>
-</span>
-<script type="text/javascript">
-SUGAR.util.doWhen(
-		"typeof(sqs_objects) != 'undefined' && typeof(sqs_objects['{$form_name}_{$fields.cus_invoice_c.name}']) != 'undefined'",
-		enableQS
-);
-</script>
-</tr>
-{/capture}
-{if $fieldsUsed > 0 }
-{$tableRow}
-{/if}
-{counter name="fieldsUsed" start=0 print=false assign="fieldsUsed"}
-{capture name="tr" assign="tableRow"}
-<tr>
-<td valign="top" id='order_number_c_label' width='12.5%' scope="col">
-{capture name="label" assign="label"}{sugar_translate label='LBL_ORDER_NUMBER' module='P_CustomInvoices'}{/capture}
-{$label|strip_semicolon}:
-<span class="required">*</span>
-</td>
-{counter name="fieldsUsed"}
-
-<td valign="top" width='37.5%' colspan='3'>
-{counter name="panelFieldCount"}
-
-<input type="text" name="{$fields.order_number_c.name}" class="sqsEnabled" tabindex="0" id="{$fields.order_number_c.name}" size="" value="{$fields.order_number_c.value}" title='' autocomplete="off"  	 >
-<input type="hidden" name="{$fields.order_number_c.id_name}" 
-id="{$fields.order_number_c.id_name}" 
+<input type="text" name="{$fields.order_name_c.name}" class="sqsEnabled" tabindex="0" id="{$fields.order_name_c.name}" size="" value="{$fields.order_name_c.value}" title='' autocomplete="off"  	 >
+<input type="hidden" name="{$fields.order_name_c.id_name}" 
+id="{$fields.order_name_c.id_name}" 
 value="{$fields.p_customorders_id_c.value}">
 <span class="id-ff multiple">
-<button type="button" name="btn_{$fields.order_number_c.name}" id="btn_{$fields.order_number_c.name}" tabindex="0" title="{sugar_translate label="LBL_SELECT_BUTTON_TITLE"}" class="button firstChild" value="{sugar_translate label="LBL_SELECT_BUTTON_LABEL"}"
+<button type="button" name="btn_{$fields.order_name_c.name}" id="btn_{$fields.order_name_c.name}" tabindex="0" title="{sugar_translate label="LBL_SELECT_BUTTON_TITLE"}" class="button firstChild" value="{sugar_translate label="LBL_SELECT_BUTTON_LABEL"}"
 onclick='open_popup(
-"{$fields.order_number_c.module}", 
+"{$fields.order_name_c.module}", 
 600, 
 400, 
 "", 
 true, 
 false, 
-{literal}{"call_back_function":"set_return","form_name":"EditView","field_to_name_array":{"id":"p_customorders_id_c","name":"order_number_c"}}{/literal}, 
+{literal}{"call_back_function":"set_return","form_name":"EditView","field_to_name_array":{"id":"p_customorders_id_c","name":"order_name_c"}}{/literal}, 
 "single", 
 true
-);' ><img src="{sugar_getimagepath file="id-ff-select.png"}"></button><button type="button" name="btn_clr_{$fields.order_number_c.name}" id="btn_clr_{$fields.order_number_c.name}" tabindex="0" title="{sugar_translate label="LBL_ACCESSKEY_CLEAR_RELATE_TITLE"}"  class="button lastChild"
-onclick="SUGAR.clearRelateField(this.form, '{$fields.order_number_c.name}', '{$fields.order_number_c.id_name}');"  value="{sugar_translate label="LBL_ACCESSKEY_CLEAR_RELATE_LABEL"}" ><img src="{sugar_getimagepath file="id-ff-clear.png"}"></button>
+);' ><img src="{sugar_getimagepath file="id-ff-select.png"}"></button><button type="button" name="btn_clr_{$fields.order_name_c.name}" id="btn_clr_{$fields.order_name_c.name}" tabindex="0" title="{sugar_translate label="LBL_ACCESSKEY_CLEAR_RELATE_TITLE"}"  class="button lastChild"
+onclick="SUGAR.clearRelateField(this.form, '{$fields.order_name_c.name}', '{$fields.order_name_c.id_name}');"  value="{sugar_translate label="LBL_ACCESSKEY_CLEAR_RELATE_LABEL"}" ><img src="{sugar_getimagepath file="id-ff-clear.png"}"></button>
 </span>
 <script type="text/javascript">
 SUGAR.util.doWhen(
-		"typeof(sqs_objects) != 'undefined' && typeof(sqs_objects['{$form_name}_{$fields.order_number_c.name}']) != 'undefined'",
+		"typeof(sqs_objects) != 'undefined' && typeof(sqs_objects['{$form_name}_{$fields.order_name_c.name}']) != 'undefined'",
 		enableQS
 );
 </script>
@@ -157,37 +114,38 @@ SUGAR.util.doWhen(
 {counter name="fieldsUsed" start=0 print=false assign="fieldsUsed"}
 {capture name="tr" assign="tableRow"}
 <tr>
-<td valign="top" id='voucher_c_label' width='12.5%' scope="col">
-{capture name="label" assign="label"}{sugar_translate label='LBL_VOUCHER' module='P_CustomInvoices'}{/capture}
+<td valign="top" id='customer_invoice_c_label' width='12.5%' scope="col">
+{capture name="label" assign="label"}{sugar_translate label='LBL_CUSTOMER_INVOICE' module='P_CustomInvoices'}{/capture}
 {$label|strip_semicolon}:
+<span class="required">*</span>
 </td>
 {counter name="fieldsUsed"}
 
 <td valign="top" width='37.5%' >
 {counter name="panelFieldCount"}
 
-<input type="text" name="{$fields.voucher_c.name}" class="sqsEnabled" tabindex="0" id="{$fields.voucher_c.name}" size="" value="{$fields.voucher_c.value}" title='' autocomplete="off"  	 >
-<input type="hidden" name="{$fields.voucher_c.id_name}" 
-id="{$fields.voucher_c.id_name}" 
-value="{$fields.p_something_id_c.value}">
+<input type="text" name="{$fields.customer_invoice_c.name}" class="sqsEnabled" tabindex="0" id="{$fields.customer_invoice_c.name}" size="" value="{$fields.customer_invoice_c.value}" title='' autocomplete="off"  	 >
+<input type="hidden" name="{$fields.customer_invoice_c.id_name}" 
+id="{$fields.customer_invoice_c.id_name}" 
+value="{$fields.contact_id_c.value}">
 <span class="id-ff multiple">
-<button type="button" name="btn_{$fields.voucher_c.name}" id="btn_{$fields.voucher_c.name}" tabindex="0" title="{sugar_translate label="LBL_SELECT_BUTTON_TITLE"}" class="button firstChild" value="{sugar_translate label="LBL_SELECT_BUTTON_LABEL"}"
+<button type="button" name="btn_{$fields.customer_invoice_c.name}" id="btn_{$fields.customer_invoice_c.name}" tabindex="0" title="{sugar_translate label="LBL_ACCESSKEY_SELECT_CONTACTS_TITLE"}" class="button firstChild" value="{sugar_translate label="LBL_ACCESSKEY_SELECT_CONTACTS_LABEL"}"
 onclick='open_popup(
-"{$fields.voucher_c.module}", 
+"{$fields.customer_invoice_c.module}", 
 600, 
 400, 
 "", 
 true, 
 false, 
-{literal}{"call_back_function":"set_return","form_name":"EditView","field_to_name_array":{"id":"p_something_id_c","name":"voucher_c"}}{/literal}, 
+{literal}{"call_back_function":"set_return","form_name":"EditView","field_to_name_array":{"id":"contact_id_c","name":"customer_invoice_c"}}{/literal}, 
 "single", 
 true
-);' ><img src="{sugar_getimagepath file="id-ff-select.png"}"></button><button type="button" name="btn_clr_{$fields.voucher_c.name}" id="btn_clr_{$fields.voucher_c.name}" tabindex="0" title="{sugar_translate label="LBL_ACCESSKEY_CLEAR_RELATE_TITLE"}"  class="button lastChild"
-onclick="SUGAR.clearRelateField(this.form, '{$fields.voucher_c.name}', '{$fields.voucher_c.id_name}');"  value="{sugar_translate label="LBL_ACCESSKEY_CLEAR_RELATE_LABEL"}" ><img src="{sugar_getimagepath file="id-ff-clear.png"}"></button>
+);' ><img src="{sugar_getimagepath file="id-ff-select.png"}"></button><button type="button" name="btn_clr_{$fields.customer_invoice_c.name}" id="btn_clr_{$fields.customer_invoice_c.name}" tabindex="0" title="{sugar_translate label="LBL_ACCESSKEY_CLEAR_CONTACTS_TITLE"}"  class="button lastChild"
+onclick="SUGAR.clearRelateField(this.form, '{$fields.customer_invoice_c.name}', '{$fields.customer_invoice_c.id_name}');"  value="{sugar_translate label="LBL_ACCESSKEY_CLEAR_CONTACTS_LABEL"}" ><img src="{sugar_getimagepath file="id-ff-clear.png"}"></button>
 </span>
 <script type="text/javascript">
 SUGAR.util.doWhen(
-		"typeof(sqs_objects) != 'undefined' && typeof(sqs_objects['{$form_name}_{$fields.voucher_c.name}']) != 'undefined'",
+		"typeof(sqs_objects) != 'undefined' && typeof(sqs_objects['{$form_name}_{$fields.customer_invoice_c.name}']) != 'undefined'",
 		enableQS
 );
 </script>
@@ -201,12 +159,50 @@ SUGAR.util.doWhen(
 {counter name="panelFieldCount"}
 
 
-{if strlen($fields.date_entered.value) <= 0}
-{assign var="value" value=$fields.date_entered.default_value }
-{else}
-{assign var="value" value=$fields.date_entered.value }
-{/if}
+{assign var="value" value=07/08/2022 }
 <span class="sugar_field" id="{$fields.date_entered.name}">{$value}</span>
+</tr>
+{/capture}
+{if $fieldsUsed > 0 }
+{$tableRow}
+{/if}
+{counter name="fieldsUsed" start=0 print=false assign="fieldsUsed"}
+{capture name="tr" assign="tableRow"}
+<tr>
+<td valign="top" id='voucher_discount_c_label' width='12.5%' scope="col">
+{capture name="label" assign="label"}{sugar_translate label='LBL_VOUCHER_DISCOUNT' module='P_CustomInvoices'}{/capture}
+{$label|strip_semicolon}:
+</td>
+{counter name="fieldsUsed"}
+
+<td valign="top" width='37.5%' colspan='3'>
+{counter name="panelFieldCount"}
+
+<input type="text" name="{$fields.voucher_discount_c.name}" class="sqsEnabled" tabindex="0" id="{$fields.voucher_discount_c.name}" size="" value="{$fields.voucher_discount_c.value}" title='' autocomplete="off"  	 >
+<input type="hidden" name="{$fields.voucher_discount_c.id_name}" 
+id="{$fields.voucher_discount_c.id_name}" 
+value="{$fields.p_customvoucher_id_c.value}">
+<span class="id-ff multiple">
+<button type="button" name="btn_{$fields.voucher_discount_c.name}" id="btn_{$fields.voucher_discount_c.name}" tabindex="0" title="{sugar_translate label="LBL_SELECT_BUTTON_TITLE"}" class="button firstChild" value="{sugar_translate label="LBL_SELECT_BUTTON_LABEL"}"
+onclick='open_popup(
+"{$fields.voucher_discount_c.module}", 
+600, 
+400, 
+"", 
+true, 
+false, 
+{literal}{"call_back_function":"set_return","form_name":"EditView","field_to_name_array":{"id":"p_customvoucher_id_c","name":"voucher_discount_c"}}{/literal}, 
+"single", 
+true
+);' ><img src="{sugar_getimagepath file="id-ff-select.png"}"></button><button type="button" name="btn_clr_{$fields.voucher_discount_c.name}" id="btn_clr_{$fields.voucher_discount_c.name}" tabindex="0" title="{sugar_translate label="LBL_ACCESSKEY_CLEAR_RELATE_TITLE"}"  class="button lastChild"
+onclick="SUGAR.clearRelateField(this.form, '{$fields.voucher_discount_c.name}', '{$fields.voucher_discount_c.id_name}');"  value="{sugar_translate label="LBL_ACCESSKEY_CLEAR_RELATE_LABEL"}" ><img src="{sugar_getimagepath file="id-ff-clear.png"}"></button>
+</span>
+<script type="text/javascript">
+SUGAR.util.doWhen(
+		"typeof(sqs_objects) != 'undefined' && typeof(sqs_objects['{$form_name}_{$fields.voucher_discount_c.name}']) != 'undefined'",
+		enableQS
+);
+</script>
 </tr>
 {/capture}
 {if $fieldsUsed > 0 }
@@ -287,18 +283,21 @@ addToValidate('EditView', 'description', 'text', false,'{/literal}{sugar_transla
 addToValidate('EditView', 'deleted', 'bool', false,'{/literal}{sugar_translate label='LBL_DELETED' module='P_CustomInvoices' for_js=true}{literal}' );
 addToValidate('EditView', 'assigned_user_id', 'relate', false,'{/literal}{sugar_translate label='LBL_ASSIGNED_TO_ID' module='P_CustomInvoices' for_js=true}{literal}' );
 addToValidate('EditView', 'assigned_user_name', 'relate', false,'{/literal}{sugar_translate label='LBL_ASSIGNED_TO_NAME' module='P_CustomInvoices' for_js=true}{literal}' );
+addToValidate('EditView', 'total_discount', 'decimal', false,'{/literal}{sugar_translate label='LBL_TOTAL_DISCOUNT' module='P_CustomInvoices' for_js=true}{literal}' );
+addToValidate('EditView', 'total_price', 'decimal', false,'{/literal}{sugar_translate label='LBL_TOTAL_PRICE' module='P_CustomInvoices' for_js=true}{literal}' );
+addToValidate('EditView', 'invoice_number', 'varchar', false,'{/literal}{sugar_translate label='LBL_INVOICE_NUMBER' module='P_CustomInvoices' for_js=true}{literal}' );
+addToValidate('EditView', 'order_price', 'decimal', false,'{/literal}{sugar_translate label='LBL_ORDER_PRICE' module='P_CustomInvoices' for_js=true}{literal}' );
+addToValidate('EditView', 'customer_invoice_c', 'relate', true,'{/literal}{sugar_translate label='LBL_CUSTOMER_INVOICE' module='P_CustomInvoices' for_js=true}{literal}' );
 addToValidate('EditView', 'cus_invoice_c', 'relate', true,'{/literal}{sugar_translate label='LBL_CUS_INVOICE' module='P_CustomInvoices' for_js=true}{literal}' );
-addToValidate('EditView', 'invoice_number_c', 'varchar', false,'{/literal}{sugar_translate label='LBL_INVOICE_NUMBER' module='P_CustomInvoices' for_js=true}{literal}' );
-addToValidate('EditView', 'order_number_c', 'relate', true,'{/literal}{sugar_translate label='LBL_ORDER_NUMBER' module='P_CustomInvoices' for_js=true}{literal}' );
-addToValidate('EditView', 'order_price_c', 'decimal', false,'{/literal}{sugar_translate label='LBL_ORDER_PRICE' module='P_CustomInvoices' for_js=true}{literal}' );
-addToValidate('EditView', 'total_discount_c', 'decimal', false,'{/literal}{sugar_translate label='LBL_TOTAL_DISCOUNT' module='P_CustomInvoices' for_js=true}{literal}' );
-addToValidate('EditView', 'total_price_c', 'decimal', false,'{/literal}{sugar_translate label='LBL_TOTAL_PRICE' module='P_CustomInvoices' for_js=true}{literal}' );
+addToValidate('EditView', 'order_name_c', 'relate', true,'{/literal}{sugar_translate label='LBL_ORDER_NAME' module='P_CustomInvoices' for_js=true}{literal}' );
+addToValidate('EditView', 'product_information_c', 'varchar', false,'{/literal}{sugar_translate label='LBL_PRODUCT_INFORMATION' module='P_CustomInvoices' for_js=true}{literal}' );
 addToValidate('EditView', 'voucher_c', 'relate', false,'{/literal}{sugar_translate label='LBL_VOUCHER' module='P_CustomInvoices' for_js=true}{literal}' );
-addToValidate('EditView', 'contact_id_c', 'id', false,'{/literal}{sugar_translate label='LBL_CUS_INVOICE_CONTACT_ID' module='P_CustomInvoices' for_js=true}{literal}' );
-addToValidate('EditView', 'p_customorders_id_c', 'id', false,'{/literal}{sugar_translate label='LBL_ORDER_NUMBER_P_CUSTOMORDERS_ID' module='P_CustomInvoices' for_js=true}{literal}' );
-addToValidate('EditView', 'p_something_id_c', 'id', false,'{/literal}{sugar_translate label='LBL_VOUCHER_P_SOMETHING_ID' module='P_CustomInvoices' for_js=true}{literal}' );
+addToValidate('EditView', 'voucher_discount_c', 'relate', false,'{/literal}{sugar_translate label='LBL_VOUCHER_DISCOUNT' module='P_CustomInvoices' for_js=true}{literal}' );
+addToValidate('EditView', 'p_customvoucher_id_c', 'id', false,'{/literal}{sugar_translate label='LBL_VOUCHER_DISCOUNT_P_CUSTOMVOUCHER_ID' module='P_CustomInvoices' for_js=true}{literal}' );
+addToValidate('EditView', 'contact_id_c', 'id', false,'{/literal}{sugar_translate label='LBL_CUSTOMER_INVOICE_CONTACT_ID' module='P_CustomInvoices' for_js=true}{literal}' );
+addToValidate('EditView', 'p_customorders_id_c', 'id', false,'{/literal}{sugar_translate label='LBL_ORDER_NAME_P_CUSTOMORDERS_ID' module='P_CustomInvoices' for_js=true}{literal}' );
 addToValidateBinaryDependency('EditView', 'assigned_user_name', 'alpha', false,'{/literal}{sugar_translate label='ERR_SQS_NO_MATCH_FIELD' module='P_CustomInvoices' for_js=true}{literal}: {/literal}{sugar_translate label='LBL_ASSIGNED_TO' module='P_CustomInvoices' for_js=true}{literal}', 'assigned_user_id' );
-addToValidateBinaryDependency('EditView', 'cus_invoice_c', 'alpha', true,'{/literal}{sugar_translate label='ERR_SQS_NO_MATCH_FIELD' module='P_CustomInvoices' for_js=true}{literal}: {/literal}{sugar_translate label='LBL_CUS_INVOICE' module='P_CustomInvoices' for_js=true}{literal}', 'contact_id_c' );
-addToValidateBinaryDependency('EditView', 'order_number_c', 'alpha', true,'{/literal}{sugar_translate label='ERR_SQS_NO_MATCH_FIELD' module='P_CustomInvoices' for_js=true}{literal}: {/literal}{sugar_translate label='LBL_ORDER_NUMBER' module='P_CustomInvoices' for_js=true}{literal}', 'p_customorders_id_c' );
-addToValidateBinaryDependency('EditView', 'voucher_c', 'alpha', false,'{/literal}{sugar_translate label='ERR_SQS_NO_MATCH_FIELD' module='P_CustomInvoices' for_js=true}{literal}: {/literal}{sugar_translate label='LBL_VOUCHER' module='P_CustomInvoices' for_js=true}{literal}', 'p_something_id_c' );
-</script><script language="javascript">if(typeof sqs_objects == 'undefined'){var sqs_objects = new Array;}sqs_objects['EditView_cus_invoice_c']={"form":"EditView","method":"query","modules":["Contacts"],"group":"or","field_list":["name","id"],"populate_list":["cus_invoice_c","contact_id_c"],"required_list":["parent_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"order":"name","limit":"30","no_match_text":"No Match"};sqs_objects['EditView_order_number_c']={"form":"EditView","method":"query","modules":["P_CustomOrders"],"group":"or","field_list":["name","id"],"populate_list":["order_number_c","p_customorders_id_c"],"required_list":["parent_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"order":"name","limit":"30","no_match_text":"No Match"};sqs_objects['EditView_voucher_c']={"form":"EditView","method":"query","modules":["P_Something"],"group":"or","field_list":["name","id"],"populate_list":["voucher_c","p_something_id_c"],"required_list":["parent_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"order":"name","limit":"30","no_match_text":"No Match"};</script>{/literal}
+addToValidateBinaryDependency('EditView', 'customer_invoice_c', 'alpha', true,'{/literal}{sugar_translate label='ERR_SQS_NO_MATCH_FIELD' module='P_CustomInvoices' for_js=true}{literal}: {/literal}{sugar_translate label='LBL_CUSTOMER_INVOICE' module='P_CustomInvoices' for_js=true}{literal}', 'contact_id_c' );
+addToValidateBinaryDependency('EditView', 'order_name_c', 'alpha', true,'{/literal}{sugar_translate label='ERR_SQS_NO_MATCH_FIELD' module='P_CustomInvoices' for_js=true}{literal}: {/literal}{sugar_translate label='LBL_ORDER_NAME' module='P_CustomInvoices' for_js=true}{literal}', 'p_customorders_id_c' );
+addToValidateBinaryDependency('EditView', 'voucher_discount_c', 'alpha', false,'{/literal}{sugar_translate label='ERR_SQS_NO_MATCH_FIELD' module='P_CustomInvoices' for_js=true}{literal}: {/literal}{sugar_translate label='LBL_VOUCHER_DISCOUNT' module='P_CustomInvoices' for_js=true}{literal}', 'p_customvoucher_id_c' );
+</script><script language="javascript">if(typeof sqs_objects == 'undefined'){var sqs_objects = new Array;}sqs_objects['EditView_order_name_c']={"form":"EditView","method":"query","modules":["P_CustomOrders"],"group":"or","field_list":["name","id"],"populate_list":["order_name_c","p_customorders_id_c"],"required_list":["parent_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"order":"name","limit":"30","no_match_text":"No Match"};sqs_objects['EditView_customer_invoice_c']={"form":"EditView","method":"query","modules":["Contacts"],"group":"or","field_list":["name","id"],"populate_list":["customer_invoice_c","contact_id_c"],"required_list":["parent_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"order":"name","limit":"30","no_match_text":"No Match"};sqs_objects['EditView_voucher_discount_c']={"form":"EditView","method":"query","modules":["P_CustomVoucher"],"group":"or","field_list":["name","id"],"populate_list":["voucher_discount_c","p_customvoucher_id_c"],"required_list":["parent_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"order":"name","limit":"30","no_match_text":"No Match"};</script>{/literal}

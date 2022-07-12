@@ -9,42 +9,12 @@ array (
     'default' => true,
     'link' => true,
   ),
-  'PRODUCT_ORDER_C' => 
+  'CREATED_BY_NAME' => 
   array (
     'type' => 'relate',
-    'default' => true,
-    'studio' => 'visible',
-    'label' => 'LBL_PRODUCT_ORDER',
-    'id' => 'P_CUSTOMPRODUCTS_ID_C',
     'link' => true,
-    'width' => '10%',
-  ),
-  'QUANTITY_C' => 
-  array (
-    'type' => 'decimal',
-    'default' => true,
-    'label' => 'LBL_QUANTITY',
-    'width' => '10%',
-  ),
-  'UNIT_PRICE_C' => 
-  array (
-    'type' => 'decimal',
-    'default' => true,
-    'label' => 'LBL_UNIT_PRICE',
-    'width' => '10%',
-  ),
-  'TOTAL_PRICE_C' => 
-  array (
-    'type' => 'decimal',
-    'default' => true,
-    'label' => 'LBL_TOTAL_PRICE',
-    'width' => '10%',
-  ),
-  'DESCRIPTION' => 
-  array (
-    'type' => 'text',
-    'label' => 'LBL_DESCRIPTION',
-    'sortable' => false,
+    'label' => 'LBL_CREATED',
+    'id' => 'CREATED_BY',
     'width' => '10%',
     'default' => true,
   ),
@@ -55,21 +25,20 @@ array (
     'width' => '10%',
     'default' => true,
   ),
-  'CREATED_BY_NAME' => 
+  'ORDER_STATUS_C' => 
   array (
-    'type' => 'relate',
-    'link' => true,
-    'label' => 'LBL_CREATED',
-    'id' => 'CREATED_BY',
+    'type' => 'varchar',
+    'default' => true,
+    'label' => 'LBL_ORDER_STATUS',
+    'width' => '10%',
+  ),
+  'DESCRIPTION' => 
+  array (
+    'type' => 'text',
+    'label' => 'LBL_DESCRIPTION',
+    'sortable' => false,
     'width' => '10%',
     'default' => true,
-  ),
-  'DATE_MODIFIED' => 
-  array (
-    'type' => 'datetime',
-    'label' => 'LBL_DATE_MODIFIED',
-    'width' => '10%',
-    'default' => false,
   ),
   'MODIFIED_BY_NAME' => 
   array (
@@ -77,6 +46,13 @@ array (
     'link' => true,
     'label' => 'LBL_MODIFIED_NAME',
     'id' => 'MODIFIED_USER_ID',
+    'width' => '10%',
+    'default' => false,
+  ),
+  'DATE_MODIFIED' => 
+  array (
+    'type' => 'datetime',
+    'label' => 'LBL_DATE_MODIFIED',
     'width' => '10%',
     'default' => false,
   ),

@@ -3,6 +3,9 @@
 $beanList['P_CustomInvoices'] = 'P_CustomInvoices';
 $beanFiles['P_CustomInvoices'] = 'modules/P_CustomInvoices/P_CustomInvoices.php';
 $moduleList[] = 'P_CustomInvoices';
+$beanList['P_CustomOrdDetail'] = 'P_CustomOrdDetail';
+$beanFiles['P_CustomOrdDetail'] = 'modules/P_CustomOrdDetail/P_CustomOrdDetail.php';
+$moduleList[] = 'P_CustomOrdDetail';
 $beanList['P_CustomOrders'] = 'P_CustomOrders';
 $beanFiles['P_CustomOrders'] = 'modules/P_CustomOrders/P_CustomOrders.php';
 $moduleList[] = 'P_CustomOrders';
@@ -12,8 +15,8 @@ $moduleList[] = 'P_CustomProducts';
 $beanList['P_CustomSuppliers'] = 'P_CustomSuppliers';
 $beanFiles['P_CustomSuppliers'] = 'modules/P_CustomSuppliers/P_CustomSuppliers.php';
 $moduleList[] = 'P_CustomSuppliers';
-$beanList['P_Something'] = 'P_Something';
-$beanFiles['P_Something'] = 'modules/P_Something/P_Something.php';
-$moduleList[] = 'P_Something';
+$beanList['P_CustomVoucher'] = 'P_CustomVoucher';
+$beanFiles['P_CustomVoucher'] = 'modules/P_CustomVoucher/P_CustomVoucher.php';
+$moduleList[] = 'P_CustomVoucher';
 
 ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.11, created on 2022-06-24 05:24:04
+<?php /* Smarty version 2.6.11, created on 2022-07-12 07:27:12
          compiled from cache/modules/P_CustomInvoices/EditView.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('modifier', 'escape', 'cache/modules/P_CustomInvoices/EditView.tpl', 38, false),array('modifier', 'strip_semicolon', 'cache/modules/P_CustomInvoices/EditView.tpl', 57, false),array('function', 'sugar_include', 'cache/modules/P_CustomInvoices/EditView.tpl', 44, false),array('function', 'counter', 'cache/modules/P_CustomInvoices/EditView.tpl', 50, false),array('function', 'sugar_translate', 'cache/modules/P_CustomInvoices/EditView.tpl', 56, false),array('function', 'sugar_getimagepath', 'cache/modules/P_CustomInvoices/EditView.tpl', 100, false),)), $this); ?>
@@ -117,8 +117,8 @@ id='<?php echo $this->_tpl_vars['fields']['name']['name']; ?>
 maxlength='255' 
 value='<?php echo $this->_tpl_vars['value']; ?>
 ' title=''      accesskey='7'  >
-<td valign="top" id='cus_invoice_c_label' width='12.5%' scope="col">
-<?php ob_start();  echo smarty_function_sugar_translate(array('label' => 'LBL_CUS_INVOICE','module' => 'P_CustomInvoices'), $this); $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean();  echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+<td valign="top" id='order_name_c_label' width='12.5%' scope="col">
+<?php ob_start();  echo smarty_function_sugar_translate(array('label' => 'LBL_ORDER_NAME','module' => 'P_CustomInvoices'), $this); $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean();  echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
 :
 <span class="required">*</span>
 </td>
@@ -129,41 +129,107 @@ value='<?php echo $this->_tpl_vars['value']; ?>
 <?php echo smarty_function_counter(array('name' => 'panelFieldCount'), $this);?>
 
 
-<input type="text" name="<?php echo $this->_tpl_vars['fields']['cus_invoice_c']['name']; ?>
-" class="sqsEnabled" tabindex="0" id="<?php echo $this->_tpl_vars['fields']['cus_invoice_c']['name']; ?>
-" size="" value="<?php echo $this->_tpl_vars['fields']['cus_invoice_c']['value']; ?>
+<input type="text" name="<?php echo $this->_tpl_vars['fields']['order_name_c']['name']; ?>
+" class="sqsEnabled" tabindex="0" id="<?php echo $this->_tpl_vars['fields']['order_name_c']['name']; ?>
+" size="" value="<?php echo $this->_tpl_vars['fields']['order_name_c']['value']; ?>
 " title='' autocomplete="off"  	 >
-<input type="hidden" name="<?php echo $this->_tpl_vars['fields']['cus_invoice_c']['id_name']; ?>
+<input type="hidden" name="<?php echo $this->_tpl_vars['fields']['order_name_c']['id_name']; ?>
 " 
-id="<?php echo $this->_tpl_vars['fields']['cus_invoice_c']['id_name']; ?>
+id="<?php echo $this->_tpl_vars['fields']['order_name_c']['id_name']; ?>
 " 
-value="<?php echo $this->_tpl_vars['fields']['contact_id_c']['value']; ?>
+value="<?php echo $this->_tpl_vars['fields']['p_customorders_id_c']['value']; ?>
 ">
 <span class="id-ff multiple">
-<button type="button" name="btn_<?php echo $this->_tpl_vars['fields']['cus_invoice_c']['name']; ?>
-" id="btn_<?php echo $this->_tpl_vars['fields']['cus_invoice_c']['name']; ?>
-" tabindex="0" title="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_SELECT_CONTACTS_TITLE'), $this);?>
-" class="button firstChild" value="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_SELECT_CONTACTS_LABEL'), $this);?>
+<button type="button" name="btn_<?php echo $this->_tpl_vars['fields']['order_name_c']['name']; ?>
+" id="btn_<?php echo $this->_tpl_vars['fields']['order_name_c']['name']; ?>
+" tabindex="0" title="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SELECT_BUTTON_TITLE'), $this);?>
+" class="button firstChild" value="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SELECT_BUTTON_LABEL'), $this);?>
 "
 onclick='open_popup(
-"<?php echo $this->_tpl_vars['fields']['cus_invoice_c']['module']; ?>
+"<?php echo $this->_tpl_vars['fields']['order_name_c']['module']; ?>
 ", 
 600, 
 400, 
 "", 
 true, 
 false, 
-<?php echo '{"call_back_function":"set_return","form_name":"EditView","field_to_name_array":{"id":"contact_id_c","name":"cus_invoice_c"}}'; ?>
+<?php echo '{"call_back_function":"set_return","form_name":"EditView","field_to_name_array":{"id":"p_customorders_id_c","name":"order_name_c"}}'; ?>
 , 
 "single", 
 true
 );' ><img src="<?php echo smarty_function_sugar_getimagepath(array('file' => "id-ff-select.png"), $this);?>
-"></button><button type="button" name="btn_clr_<?php echo $this->_tpl_vars['fields']['cus_invoice_c']['name']; ?>
-" id="btn_clr_<?php echo $this->_tpl_vars['fields']['cus_invoice_c']['name']; ?>
+"></button><button type="button" name="btn_clr_<?php echo $this->_tpl_vars['fields']['order_name_c']['name']; ?>
+" id="btn_clr_<?php echo $this->_tpl_vars['fields']['order_name_c']['name']; ?>
+" tabindex="0" title="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_CLEAR_RELATE_TITLE'), $this);?>
+"  class="button lastChild"
+onclick="SUGAR.clearRelateField(this.form, '<?php echo $this->_tpl_vars['fields']['order_name_c']['name']; ?>
+', '<?php echo $this->_tpl_vars['fields']['order_name_c']['id_name']; ?>
+');"  value="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_CLEAR_RELATE_LABEL'), $this);?>
+" ><img src="<?php echo smarty_function_sugar_getimagepath(array('file' => "id-ff-clear.png"), $this);?>
+"></button>
+</span>
+<script type="text/javascript">
+SUGAR.util.doWhen(
+		"typeof(sqs_objects) != 'undefined' && typeof(sqs_objects['<?php echo $this->_tpl_vars['form_name']; ?>
+_<?php echo $this->_tpl_vars['fields']['order_name_c']['name']; ?>
+']) != 'undefined'",
+		enableQS
+);
+</script>
+</tr>
+<?php $this->_smarty_vars['capture']['tr'] = ob_get_contents();  $this->assign('tableRow', ob_get_contents());ob_end_clean();  if ($this->_tpl_vars['fieldsUsed'] > 0):  echo $this->_tpl_vars['tableRow']; ?>
+
+<?php endif;  echo smarty_function_counter(array('name' => 'fieldsUsed','start' => 0,'print' => false,'assign' => 'fieldsUsed'), $this);?>
+
+<?php ob_start(); ?>
+<tr>
+<td valign="top" id='customer_invoice_c_label' width='12.5%' scope="col">
+<?php ob_start();  echo smarty_function_sugar_translate(array('label' => 'LBL_CUSTOMER_INVOICE','module' => 'P_CustomInvoices'), $this); $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean();  echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
+<span class="required">*</span>
+</td>
+<?php echo smarty_function_counter(array('name' => 'fieldsUsed'), $this);?>
+
+
+<td valign="top" width='37.5%' >
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount'), $this);?>
+
+
+<input type="text" name="<?php echo $this->_tpl_vars['fields']['customer_invoice_c']['name']; ?>
+" class="sqsEnabled" tabindex="0" id="<?php echo $this->_tpl_vars['fields']['customer_invoice_c']['name']; ?>
+" size="" value="<?php echo $this->_tpl_vars['fields']['customer_invoice_c']['value']; ?>
+" title='' autocomplete="off"  	 >
+<input type="hidden" name="<?php echo $this->_tpl_vars['fields']['customer_invoice_c']['id_name']; ?>
+" 
+id="<?php echo $this->_tpl_vars['fields']['customer_invoice_c']['id_name']; ?>
+" 
+value="<?php echo $this->_tpl_vars['fields']['contact_id_c']['value']; ?>
+">
+<span class="id-ff multiple">
+<button type="button" name="btn_<?php echo $this->_tpl_vars['fields']['customer_invoice_c']['name']; ?>
+" id="btn_<?php echo $this->_tpl_vars['fields']['customer_invoice_c']['name']; ?>
+" tabindex="0" title="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_SELECT_CONTACTS_TITLE'), $this);?>
+" class="button firstChild" value="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_SELECT_CONTACTS_LABEL'), $this);?>
+"
+onclick='open_popup(
+"<?php echo $this->_tpl_vars['fields']['customer_invoice_c']['module']; ?>
+", 
+600, 
+400, 
+"", 
+true, 
+false, 
+<?php echo '{"call_back_function":"set_return","form_name":"EditView","field_to_name_array":{"id":"contact_id_c","name":"customer_invoice_c"}}'; ?>
+, 
+"single", 
+true
+);' ><img src="<?php echo smarty_function_sugar_getimagepath(array('file' => "id-ff-select.png"), $this);?>
+"></button><button type="button" name="btn_clr_<?php echo $this->_tpl_vars['fields']['customer_invoice_c']['name']; ?>
+" id="btn_clr_<?php echo $this->_tpl_vars['fields']['customer_invoice_c']['name']; ?>
 " tabindex="0" title="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_CLEAR_CONTACTS_TITLE'), $this);?>
 "  class="button lastChild"
-onclick="SUGAR.clearRelateField(this.form, '<?php echo $this->_tpl_vars['fields']['cus_invoice_c']['name']; ?>
-', '<?php echo $this->_tpl_vars['fields']['cus_invoice_c']['id_name']; ?>
+onclick="SUGAR.clearRelateField(this.form, '<?php echo $this->_tpl_vars['fields']['customer_invoice_c']['name']; ?>
+', '<?php echo $this->_tpl_vars['fields']['customer_invoice_c']['id_name']; ?>
 ');"  value="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_CLEAR_CONTACTS_LABEL'), $this);?>
 " ><img src="<?php echo smarty_function_sugar_getimagepath(array('file' => "id-ff-clear.png"), $this);?>
 "></button>
@@ -171,138 +237,7 @@ onclick="SUGAR.clearRelateField(this.form, '<?php echo $this->_tpl_vars['fields'
 <script type="text/javascript">
 SUGAR.util.doWhen(
 		"typeof(sqs_objects) != 'undefined' && typeof(sqs_objects['<?php echo $this->_tpl_vars['form_name']; ?>
-_<?php echo $this->_tpl_vars['fields']['cus_invoice_c']['name']; ?>
-']) != 'undefined'",
-		enableQS
-);
-</script>
-</tr>
-<?php $this->_smarty_vars['capture']['tr'] = ob_get_contents();  $this->assign('tableRow', ob_get_contents());ob_end_clean();  if ($this->_tpl_vars['fieldsUsed'] > 0):  echo $this->_tpl_vars['tableRow']; ?>
-
-<?php endif;  echo smarty_function_counter(array('name' => 'fieldsUsed','start' => 0,'print' => false,'assign' => 'fieldsUsed'), $this);?>
-
-<?php ob_start(); ?>
-<tr>
-<td valign="top" id='order_number_c_label' width='12.5%' scope="col">
-<?php ob_start();  echo smarty_function_sugar_translate(array('label' => 'LBL_ORDER_NUMBER','module' => 'P_CustomInvoices'), $this); $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean();  echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
-:
-<span class="required">*</span>
-</td>
-<?php echo smarty_function_counter(array('name' => 'fieldsUsed'), $this);?>
-
-
-<td valign="top" width='37.5%' colspan='3'>
-<?php echo smarty_function_counter(array('name' => 'panelFieldCount'), $this);?>
-
-
-<input type="text" name="<?php echo $this->_tpl_vars['fields']['order_number_c']['name']; ?>
-" class="sqsEnabled" tabindex="0" id="<?php echo $this->_tpl_vars['fields']['order_number_c']['name']; ?>
-" size="" value="<?php echo $this->_tpl_vars['fields']['order_number_c']['value']; ?>
-" title='' autocomplete="off"  	 >
-<input type="hidden" name="<?php echo $this->_tpl_vars['fields']['order_number_c']['id_name']; ?>
-" 
-id="<?php echo $this->_tpl_vars['fields']['order_number_c']['id_name']; ?>
-" 
-value="<?php echo $this->_tpl_vars['fields']['p_customorders_id_c']['value']; ?>
-">
-<span class="id-ff multiple">
-<button type="button" name="btn_<?php echo $this->_tpl_vars['fields']['order_number_c']['name']; ?>
-" id="btn_<?php echo $this->_tpl_vars['fields']['order_number_c']['name']; ?>
-" tabindex="0" title="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SELECT_BUTTON_TITLE'), $this);?>
-" class="button firstChild" value="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SELECT_BUTTON_LABEL'), $this);?>
-"
-onclick='open_popup(
-"<?php echo $this->_tpl_vars['fields']['order_number_c']['module']; ?>
-", 
-600, 
-400, 
-"", 
-true, 
-false, 
-<?php echo '{"call_back_function":"set_return","form_name":"EditView","field_to_name_array":{"id":"p_customorders_id_c","name":"order_number_c"}}'; ?>
-, 
-"single", 
-true
-);' ><img src="<?php echo smarty_function_sugar_getimagepath(array('file' => "id-ff-select.png"), $this);?>
-"></button><button type="button" name="btn_clr_<?php echo $this->_tpl_vars['fields']['order_number_c']['name']; ?>
-" id="btn_clr_<?php echo $this->_tpl_vars['fields']['order_number_c']['name']; ?>
-" tabindex="0" title="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_CLEAR_RELATE_TITLE'), $this);?>
-"  class="button lastChild"
-onclick="SUGAR.clearRelateField(this.form, '<?php echo $this->_tpl_vars['fields']['order_number_c']['name']; ?>
-', '<?php echo $this->_tpl_vars['fields']['order_number_c']['id_name']; ?>
-');"  value="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_CLEAR_RELATE_LABEL'), $this);?>
-" ><img src="<?php echo smarty_function_sugar_getimagepath(array('file' => "id-ff-clear.png"), $this);?>
-"></button>
-</span>
-<script type="text/javascript">
-SUGAR.util.doWhen(
-		"typeof(sqs_objects) != 'undefined' && typeof(sqs_objects['<?php echo $this->_tpl_vars['form_name']; ?>
-_<?php echo $this->_tpl_vars['fields']['order_number_c']['name']; ?>
-']) != 'undefined'",
-		enableQS
-);
-</script>
-</tr>
-<?php $this->_smarty_vars['capture']['tr'] = ob_get_contents();  $this->assign('tableRow', ob_get_contents());ob_end_clean();  if ($this->_tpl_vars['fieldsUsed'] > 0):  echo $this->_tpl_vars['tableRow']; ?>
-
-<?php endif;  echo smarty_function_counter(array('name' => 'fieldsUsed','start' => 0,'print' => false,'assign' => 'fieldsUsed'), $this);?>
-
-<?php ob_start(); ?>
-<tr>
-<td valign="top" id='voucher_c_label' width='12.5%' scope="col">
-<?php ob_start();  echo smarty_function_sugar_translate(array('label' => 'LBL_VOUCHER','module' => 'P_CustomInvoices'), $this); $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean();  echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
-:
-</td>
-<?php echo smarty_function_counter(array('name' => 'fieldsUsed'), $this);?>
-
-
-<td valign="top" width='37.5%' >
-<?php echo smarty_function_counter(array('name' => 'panelFieldCount'), $this);?>
-
-
-<input type="text" name="<?php echo $this->_tpl_vars['fields']['voucher_c']['name']; ?>
-" class="sqsEnabled" tabindex="0" id="<?php echo $this->_tpl_vars['fields']['voucher_c']['name']; ?>
-" size="" value="<?php echo $this->_tpl_vars['fields']['voucher_c']['value']; ?>
-" title='' autocomplete="off"  	 >
-<input type="hidden" name="<?php echo $this->_tpl_vars['fields']['voucher_c']['id_name']; ?>
-" 
-id="<?php echo $this->_tpl_vars['fields']['voucher_c']['id_name']; ?>
-" 
-value="<?php echo $this->_tpl_vars['fields']['p_something_id_c']['value']; ?>
-">
-<span class="id-ff multiple">
-<button type="button" name="btn_<?php echo $this->_tpl_vars['fields']['voucher_c']['name']; ?>
-" id="btn_<?php echo $this->_tpl_vars['fields']['voucher_c']['name']; ?>
-" tabindex="0" title="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SELECT_BUTTON_TITLE'), $this);?>
-" class="button firstChild" value="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SELECT_BUTTON_LABEL'), $this);?>
-"
-onclick='open_popup(
-"<?php echo $this->_tpl_vars['fields']['voucher_c']['module']; ?>
-", 
-600, 
-400, 
-"", 
-true, 
-false, 
-<?php echo '{"call_back_function":"set_return","form_name":"EditView","field_to_name_array":{"id":"p_something_id_c","name":"voucher_c"}}'; ?>
-, 
-"single", 
-true
-);' ><img src="<?php echo smarty_function_sugar_getimagepath(array('file' => "id-ff-select.png"), $this);?>
-"></button><button type="button" name="btn_clr_<?php echo $this->_tpl_vars['fields']['voucher_c']['name']; ?>
-" id="btn_clr_<?php echo $this->_tpl_vars['fields']['voucher_c']['name']; ?>
-" tabindex="0" title="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_CLEAR_RELATE_TITLE'), $this);?>
-"  class="button lastChild"
-onclick="SUGAR.clearRelateField(this.form, '<?php echo $this->_tpl_vars['fields']['voucher_c']['name']; ?>
-', '<?php echo $this->_tpl_vars['fields']['voucher_c']['id_name']; ?>
-');"  value="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_CLEAR_RELATE_LABEL'), $this);?>
-" ><img src="<?php echo smarty_function_sugar_getimagepath(array('file' => "id-ff-clear.png"), $this);?>
-"></button>
-</span>
-<script type="text/javascript">
-SUGAR.util.doWhen(
-		"typeof(sqs_objects) != 'undefined' && typeof(sqs_objects['<?php echo $this->_tpl_vars['form_name']; ?>
-_<?php echo $this->_tpl_vars['fields']['voucher_c']['name']; ?>
+_<?php echo $this->_tpl_vars['fields']['customer_invoice_c']['name']; ?>
 ']) != 'undefined'",
 		enableQS
 );
@@ -319,10 +254,75 @@ _<?php echo $this->_tpl_vars['fields']['voucher_c']['name']; ?>
 
 
 
-<?php if (strlen ( $this->_tpl_vars['fields']['date_entered']['value'] ) <= 0):  $this->assign('value', $this->_tpl_vars['fields']['date_entered']['default_value']);  else:  $this->assign('value', $this->_tpl_vars['fields']['date_entered']['value']);  endif; ?>
+<?php $this->assign('value', "07/08/2022"); ?>
 <span class="sugar_field" id="<?php echo $this->_tpl_vars['fields']['date_entered']['name']; ?>
 "><?php echo $this->_tpl_vars['value']; ?>
 </span>
+</tr>
+<?php $this->_smarty_vars['capture']['tr'] = ob_get_contents();  $this->assign('tableRow', ob_get_contents());ob_end_clean();  if ($this->_tpl_vars['fieldsUsed'] > 0):  echo $this->_tpl_vars['tableRow']; ?>
+
+<?php endif;  echo smarty_function_counter(array('name' => 'fieldsUsed','start' => 0,'print' => false,'assign' => 'fieldsUsed'), $this);?>
+
+<?php ob_start(); ?>
+<tr>
+<td valign="top" id='voucher_discount_c_label' width='12.5%' scope="col">
+<?php ob_start();  echo smarty_function_sugar_translate(array('label' => 'LBL_VOUCHER_DISCOUNT','module' => 'P_CustomInvoices'), $this); $this->_smarty_vars['capture']['label'] = ob_get_contents();  $this->assign('label', ob_get_contents());ob_end_clean();  echo ((is_array($_tmp=$this->_tpl_vars['label'])) ? $this->_run_mod_handler('strip_semicolon', true, $_tmp) : smarty_modifier_strip_semicolon($_tmp)); ?>
+:
+</td>
+<?php echo smarty_function_counter(array('name' => 'fieldsUsed'), $this);?>
+
+
+<td valign="top" width='37.5%' colspan='3'>
+<?php echo smarty_function_counter(array('name' => 'panelFieldCount'), $this);?>
+
+
+<input type="text" name="<?php echo $this->_tpl_vars['fields']['voucher_discount_c']['name']; ?>
+" class="sqsEnabled" tabindex="0" id="<?php echo $this->_tpl_vars['fields']['voucher_discount_c']['name']; ?>
+" size="" value="<?php echo $this->_tpl_vars['fields']['voucher_discount_c']['value']; ?>
+" title='' autocomplete="off"  	 >
+<input type="hidden" name="<?php echo $this->_tpl_vars['fields']['voucher_discount_c']['id_name']; ?>
+" 
+id="<?php echo $this->_tpl_vars['fields']['voucher_discount_c']['id_name']; ?>
+" 
+value="<?php echo $this->_tpl_vars['fields']['p_customvoucher_id_c']['value']; ?>
+">
+<span class="id-ff multiple">
+<button type="button" name="btn_<?php echo $this->_tpl_vars['fields']['voucher_discount_c']['name']; ?>
+" id="btn_<?php echo $this->_tpl_vars['fields']['voucher_discount_c']['name']; ?>
+" tabindex="0" title="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SELECT_BUTTON_TITLE'), $this);?>
+" class="button firstChild" value="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_SELECT_BUTTON_LABEL'), $this);?>
+"
+onclick='open_popup(
+"<?php echo $this->_tpl_vars['fields']['voucher_discount_c']['module']; ?>
+", 
+600, 
+400, 
+"", 
+true, 
+false, 
+<?php echo '{"call_back_function":"set_return","form_name":"EditView","field_to_name_array":{"id":"p_customvoucher_id_c","name":"voucher_discount_c"}}'; ?>
+, 
+"single", 
+true
+);' ><img src="<?php echo smarty_function_sugar_getimagepath(array('file' => "id-ff-select.png"), $this);?>
+"></button><button type="button" name="btn_clr_<?php echo $this->_tpl_vars['fields']['voucher_discount_c']['name']; ?>
+" id="btn_clr_<?php echo $this->_tpl_vars['fields']['voucher_discount_c']['name']; ?>
+" tabindex="0" title="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_CLEAR_RELATE_TITLE'), $this);?>
+"  class="button lastChild"
+onclick="SUGAR.clearRelateField(this.form, '<?php echo $this->_tpl_vars['fields']['voucher_discount_c']['name']; ?>
+', '<?php echo $this->_tpl_vars['fields']['voucher_discount_c']['id_name']; ?>
+');"  value="<?php echo smarty_function_sugar_translate(array('label' => 'LBL_ACCESSKEY_CLEAR_RELATE_LABEL'), $this);?>
+" ><img src="<?php echo smarty_function_sugar_getimagepath(array('file' => "id-ff-clear.png"), $this);?>
+"></button>
+</span>
+<script type="text/javascript">
+SUGAR.util.doWhen(
+		"typeof(sqs_objects) != 'undefined' && typeof(sqs_objects['<?php echo $this->_tpl_vars['form_name']; ?>
+_<?php echo $this->_tpl_vars['fields']['voucher_discount_c']['name']; ?>
+']) != 'undefined'",
+		enableQS
+);
+</script>
 </tr>
 <?php $this->_smarty_vars['capture']['tr'] = ob_get_contents();  $this->assign('tableRow', ob_get_contents());ob_end_clean();  if ($this->_tpl_vars['fieldsUsed'] > 0):  echo $this->_tpl_vars['tableRow']; ?>
 
@@ -429,18 +429,21 @@ addToValidate(\'EditView\', \'description\', \'text\', false,\'';  echo smarty_f
 addToValidate(\'EditView\', \'deleted\', \'bool\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_DELETED','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
 addToValidate(\'EditView\', \'assigned_user_id\', \'relate\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_ASSIGNED_TO_ID','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
 addToValidate(\'EditView\', \'assigned_user_name\', \'relate\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_ASSIGNED_TO_NAME','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'total_discount\', \'decimal\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_TOTAL_DISCOUNT','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'total_price\', \'decimal\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_TOTAL_PRICE','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'invoice_number\', \'varchar\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_INVOICE_NUMBER','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'order_price\', \'decimal\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_ORDER_PRICE','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'customer_invoice_c\', \'relate\', true,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_CUSTOMER_INVOICE','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
 addToValidate(\'EditView\', \'cus_invoice_c\', \'relate\', true,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_CUS_INVOICE','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
-addToValidate(\'EditView\', \'invoice_number_c\', \'varchar\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_INVOICE_NUMBER','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
-addToValidate(\'EditView\', \'order_number_c\', \'relate\', true,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_ORDER_NUMBER','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
-addToValidate(\'EditView\', \'order_price_c\', \'decimal\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_ORDER_PRICE','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
-addToValidate(\'EditView\', \'total_discount_c\', \'decimal\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_TOTAL_DISCOUNT','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
-addToValidate(\'EditView\', \'total_price_c\', \'decimal\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_TOTAL_PRICE','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'order_name_c\', \'relate\', true,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_ORDER_NAME','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'product_information_c\', \'varchar\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_PRODUCT_INFORMATION','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
 addToValidate(\'EditView\', \'voucher_c\', \'relate\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_VOUCHER','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
-addToValidate(\'EditView\', \'contact_id_c\', \'id\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_CUS_INVOICE_CONTACT_ID','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
-addToValidate(\'EditView\', \'p_customorders_id_c\', \'id\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_ORDER_NUMBER_P_CUSTOMORDERS_ID','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
-addToValidate(\'EditView\', \'p_something_id_c\', \'id\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_VOUCHER_P_SOMETHING_ID','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'voucher_discount_c\', \'relate\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_VOUCHER_DISCOUNT','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'p_customvoucher_id_c\', \'id\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_VOUCHER_DISCOUNT_P_CUSTOMVOUCHER_ID','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'contact_id_c\', \'id\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_CUSTOMER_INVOICE_CONTACT_ID','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
+addToValidate(\'EditView\', \'p_customorders_id_c\', \'id\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'LBL_ORDER_NAME_P_CUSTOMORDERS_ID','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\' );
 addToValidateBinaryDependency(\'EditView\', \'assigned_user_name\', \'alpha\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'ERR_SQS_NO_MATCH_FIELD','module' => 'P_CustomInvoices','for_js' => true), $this); echo ': ';  echo smarty_function_sugar_translate(array('label' => 'LBL_ASSIGNED_TO','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\', \'assigned_user_id\' );
-addToValidateBinaryDependency(\'EditView\', \'cus_invoice_c\', \'alpha\', true,\'';  echo smarty_function_sugar_translate(array('label' => 'ERR_SQS_NO_MATCH_FIELD','module' => 'P_CustomInvoices','for_js' => true), $this); echo ': ';  echo smarty_function_sugar_translate(array('label' => 'LBL_CUS_INVOICE','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\', \'contact_id_c\' );
-addToValidateBinaryDependency(\'EditView\', \'order_number_c\', \'alpha\', true,\'';  echo smarty_function_sugar_translate(array('label' => 'ERR_SQS_NO_MATCH_FIELD','module' => 'P_CustomInvoices','for_js' => true), $this); echo ': ';  echo smarty_function_sugar_translate(array('label' => 'LBL_ORDER_NUMBER','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\', \'p_customorders_id_c\' );
-addToValidateBinaryDependency(\'EditView\', \'voucher_c\', \'alpha\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'ERR_SQS_NO_MATCH_FIELD','module' => 'P_CustomInvoices','for_js' => true), $this); echo ': ';  echo smarty_function_sugar_translate(array('label' => 'LBL_VOUCHER','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\', \'p_something_id_c\' );
-</script><script language="javascript">if(typeof sqs_objects == \'undefined\'){var sqs_objects = new Array;}sqs_objects[\'EditView_cus_invoice_c\']={"form":"EditView","method":"query","modules":["Contacts"],"group":"or","field_list":["name","id"],"populate_list":["cus_invoice_c","contact_id_c"],"required_list":["parent_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"order":"name","limit":"30","no_match_text":"No Match"};sqs_objects[\'EditView_order_number_c\']={"form":"EditView","method":"query","modules":["P_CustomOrders"],"group":"or","field_list":["name","id"],"populate_list":["order_number_c","p_customorders_id_c"],"required_list":["parent_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"order":"name","limit":"30","no_match_text":"No Match"};sqs_objects[\'EditView_voucher_c\']={"form":"EditView","method":"query","modules":["P_Something"],"group":"or","field_list":["name","id"],"populate_list":["voucher_c","p_something_id_c"],"required_list":["parent_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"order":"name","limit":"30","no_match_text":"No Match"};</script>'; ?>
+addToValidateBinaryDependency(\'EditView\', \'customer_invoice_c\', \'alpha\', true,\'';  echo smarty_function_sugar_translate(array('label' => 'ERR_SQS_NO_MATCH_FIELD','module' => 'P_CustomInvoices','for_js' => true), $this); echo ': ';  echo smarty_function_sugar_translate(array('label' => 'LBL_CUSTOMER_INVOICE','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\', \'contact_id_c\' );
+addToValidateBinaryDependency(\'EditView\', \'order_name_c\', \'alpha\', true,\'';  echo smarty_function_sugar_translate(array('label' => 'ERR_SQS_NO_MATCH_FIELD','module' => 'P_CustomInvoices','for_js' => true), $this); echo ': ';  echo smarty_function_sugar_translate(array('label' => 'LBL_ORDER_NAME','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\', \'p_customorders_id_c\' );
+addToValidateBinaryDependency(\'EditView\', \'voucher_discount_c\', \'alpha\', false,\'';  echo smarty_function_sugar_translate(array('label' => 'ERR_SQS_NO_MATCH_FIELD','module' => 'P_CustomInvoices','for_js' => true), $this); echo ': ';  echo smarty_function_sugar_translate(array('label' => 'LBL_VOUCHER_DISCOUNT','module' => 'P_CustomInvoices','for_js' => true), $this); echo '\', \'p_customvoucher_id_c\' );
+</script><script language="javascript">if(typeof sqs_objects == \'undefined\'){var sqs_objects = new Array;}sqs_objects[\'EditView_order_name_c\']={"form":"EditView","method":"query","modules":["P_CustomOrders"],"group":"or","field_list":["name","id"],"populate_list":["order_name_c","p_customorders_id_c"],"required_list":["parent_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"order":"name","limit":"30","no_match_text":"No Match"};sqs_objects[\'EditView_customer_invoice_c\']={"form":"EditView","method":"query","modules":["Contacts"],"group":"or","field_list":["name","id"],"populate_list":["customer_invoice_c","contact_id_c"],"required_list":["parent_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"order":"name","limit":"30","no_match_text":"No Match"};sqs_objects[\'EditView_voucher_discount_c\']={"form":"EditView","method":"query","modules":["P_CustomVoucher"],"group":"or","field_list":["name","id"],"populate_list":["voucher_discount_c","p_customvoucher_id_c"],"required_list":["parent_id"],"conditions":[{"name":"name","op":"like_custom","end":"%","value":""}],"order":"name","limit":"30","no_match_text":"No Match"};</script>'; ?>

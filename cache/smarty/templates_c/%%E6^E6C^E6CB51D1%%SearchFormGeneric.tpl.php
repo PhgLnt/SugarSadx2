@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.11, created on 2022-06-24 05:16:22
+<?php /* Smarty version 2.6.11, created on 2022-07-12 07:19:27
          compiled from include/SearchForm/tpls/SearchFormGeneric.tpl */ ?>
 <?php require_once(SMARTY_CORE_DIR . 'core.load_plugins.php');
 smarty_core_load_plugins(array('plugins' => array(array('function', 'math', 'include/SearchForm/tpls/SearchFormGeneric.tpl', 70, false),array('function', 'sugar_field', 'include/SearchForm/tpls/SearchFormGeneric.tpl', 94, false),array('function', 'sugar_button', 'include/SearchForm/tpls/SearchFormGeneric.tpl', 105, false),)), $this); ?>

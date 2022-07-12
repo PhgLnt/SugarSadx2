@@ -60,9 +60,9 @@ $manifest = array (
   'icon' => '',
   'is_uninstallable' => true,
   'name' => 'WorkHere',
-  'published_date' => '2022-06-22 18:25:39',
+  'published_date' => '2022-07-07 10:50:15',
   'type' => 'module',
-  'version' => 1655922339,
+  'version' => 1657191016,
   'remove_tables' => 'prompt',
 );
 

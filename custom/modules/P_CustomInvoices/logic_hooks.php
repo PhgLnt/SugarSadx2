@@ -30,7 +30,15 @@ $hook_array['before_save'][] = array(
     'custom/modules/P_CustomInvoices/saveAffect.php', //String or null if using namespaces
     'saveAffect', //String
     'getTotalPrice', //String
+
 );
+//$hook_array['before_save'][] = array(
+//    5, //Integer
+//    'demo display product info', //String
+//    'custom/modules/P_CustomInvoices/saveAffect.php', //String or null if using namespaces
+//    'saveAffect', //String
+//    'displayProductInfo', //String
+//);
 
 
 

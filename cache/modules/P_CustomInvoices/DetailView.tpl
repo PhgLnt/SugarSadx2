@@ -62,21 +62,21 @@ SUGAR.util.doWhen(function(){
 </td>
 {counter name="fieldsUsed"}
 <td width='12.5%' scope="col">
-{if !$fields.invoice_number_c.hidden}
+{if !$fields.invoice_number.hidden}
 {capture name="label" assign="label"}{sugar_translate label='LBL_INVOICE_NUMBER' module='P_CustomInvoices'}{/capture}
 {$label|strip_semicolon}:
 {/if}
 </td>
 <td width='37.5%'  >
-{if !$fields.invoice_number_c.hidden}
+{if !$fields.invoice_number.hidden}
 {counter name="panelFieldCount"}
 
-{if strlen($fields.invoice_number_c.value) <= 0}
-{assign var="value" value=$fields.invoice_number_c.default_value }
+{if strlen($fields.invoice_number.value) <= 0}
+{assign var="value" value=$fields.invoice_number.default_value }
 {else}
-{assign var="value" value=$fields.invoice_number_c.value }
+{assign var="value" value=$fields.invoice_number.value }
 {/if} 
-<span class="sugar_field" id="{$fields.invoice_number_c.name}">{$fields.invoice_number_c.value}</span>
+<span class="sugar_field" id="{$fields.invoice_number.name}">{$fields.invoice_number.value}</span>
 {/if}
 </td>
 </tr>
@@ -90,62 +90,78 @@ SUGAR.util.doWhen(function(){
 <tr>
 {counter name="fieldsUsed"}
 <td width='12.5%' scope="col">
-{if !$fields.cus_invoice_c.hidden}
-{capture name="label" assign="label"}{sugar_translate label='LBL_CUS_INVOICE' module='P_CustomInvoices'}{/capture}
+{if !$fields.customer_invoice_c.hidden}
+{capture name="label" assign="label"}{sugar_translate label='LBL_CUSTOMER_INVOICE' module='P_CustomInvoices'}{/capture}
 {$label|strip_semicolon}:
 {/if}
 </td>
 <td width='37.5%'  >
-{if !$fields.cus_invoice_c.hidden}
+{if !$fields.customer_invoice_c.hidden}
 {counter name="panelFieldCount"}
 
 {if !empty($fields.contact_id_c.value)}
 {capture assign="detail_url"}index.php?module=Contacts&action=DetailView&record={$fields.contact_id_c.value}{/capture}
 <a href="{sugar_ajax_url url=$detail_url}">{/if}
-<span id="contact_id_c" class="sugar_field" data-id-value="{$fields.contact_id_c.value}">{$fields.cus_invoice_c.value}</span>
+<span id="contact_id_c" class="sugar_field" data-id-value="{$fields.contact_id_c.value}">{$fields.customer_invoice_c.value}</span>
 {if !empty($fields.contact_id_c.value)}</a>{/if}
 {/if}
 </td>
 {counter name="fieldsUsed"}
 <td width='12.5%' scope="col">
-{if !$fields.order_number_c.hidden}
-{capture name="label" assign="label"}{sugar_translate label='LBL_ORDER_NUMBER' module='P_CustomInvoices'}{/capture}
+{if !$fields.date_entered.hidden}
+{capture name="label" assign="label"}{sugar_translate label='LBL_DATE_ENTERED' module='P_CustomInvoices'}{/capture}
 {$label|strip_semicolon}:
 {/if}
 </td>
 <td width='37.5%'  >
-{if !$fields.order_number_c.hidden}
+{if !$fields.date_entered.hidden}
+{counter name="panelFieldCount"}
+
+
+{assign var="value" value=07/12/2022 }
+<span class="sugar_field" id="{$fields.date_entered.name}">{$value}</span>
+{/if}
+</td>
+</tr>
+{/capture}
+{if $fieldsUsed > 0 && $fieldsUsed != $fieldsHidden}
+{$tableRow}
+{/if}
+{counter name="fieldsUsed" start=0 print=false assign="fieldsUsed"}
+{counter name="fieldsHidden" start=0 print=false assign="fieldsHidden"}
+{capture name="tr" assign="tableRow"}
+<tr>
+{counter name="fieldsUsed"}
+<td width='12.5%' scope="col">
+{if !$fields.order_name_c.hidden}
+{capture name="label" assign="label"}{sugar_translate label='LBL_ORDER_NAME' module='P_CustomInvoices'}{/capture}
+{$label|strip_semicolon}:
+{/if}
+</td>
+<td width='37.5%'  >
+{if !$fields.order_name_c.hidden}
 {counter name="panelFieldCount"}
 
 {if !empty($fields.p_customorders_id_c.value)}
 {capture assign="detail_url"}index.php?module=P_CustomOrders&action=DetailView&record={$fields.p_customorders_id_c.value}{/capture}
 <a href="{sugar_ajax_url url=$detail_url}">{/if}
-<span id="p_customorders_id_c" class="sugar_field" data-id-value="{$fields.p_customorders_id_c.value}">{$fields.order_number_c.value}</span>
+<span id="p_customorders_id_c" class="sugar_field" data-id-value="{$fields.p_customorders_id_c.value}">{$fields.order_name_c.value}</span>
 {if !empty($fields.p_customorders_id_c.value)}</a>{/if}
 {/if}
 </td>
-</tr>
-{/capture}
-{if $fieldsUsed > 0 && $fieldsUsed != $fieldsHidden}
-{$tableRow}
-{/if}
-{counter name="fieldsUsed" start=0 print=false assign="fieldsUsed"}
-{counter name="fieldsHidden" start=0 print=false assign="fieldsHidden"}
-{capture name="tr" assign="tableRow"}
-<tr>
 {counter name="fieldsUsed"}
 <td width='12.5%' scope="col">
-{if !$fields.order_price_c.hidden}
+{if !$fields.order_price.hidden}
 {capture name="label" assign="label"}{sugar_translate label='LBL_ORDER_PRICE' module='P_CustomInvoices'}{/capture}
 {$label|strip_semicolon}:
 {/if}
 </td>
-<td width='37.5%' colspan='3' >
-{if !$fields.order_price_c.hidden}
+<td width='37.5%'  >
+{if !$fields.order_price.hidden}
 {counter name="panelFieldCount"}
 
-<span class="sugar_field" id="{$fields.order_price_c.name}">
-{sugar_number_format var=$fields.order_price_c.value precision=0 }
+<span class="sugar_field" id="{$fields.order_price.name}">
+{sugar_number_format var=$fields.order_price.value precision=0 }
 </span>
 {/if}
 </td>
@@ -160,35 +176,35 @@ SUGAR.util.doWhen(function(){
 <tr>
 {counter name="fieldsUsed"}
 <td width='12.5%' scope="col">
-{if !$fields.voucher_c.hidden}
-{capture name="label" assign="label"}{sugar_translate label='LBL_VOUCHER' module='P_CustomInvoices'}{/capture}
+{if !$fields.voucher_discount_c.hidden}
+{capture name="label" assign="label"}{sugar_translate label='LBL_VOUCHER_DISCOUNT' module='P_CustomInvoices'}{/capture}
 {$label|strip_semicolon}:
 {/if}
 </td>
 <td width='37.5%'  >
-{if !$fields.voucher_c.hidden}
+{if !$fields.voucher_discount_c.hidden}
 {counter name="panelFieldCount"}
 
-{if !empty($fields.p_something_id_c.value)}
-{capture assign="detail_url"}index.php?module=P_Something&action=DetailView&record={$fields.p_something_id_c.value}{/capture}
+{if !empty($fields.p_customvoucher_id_c.value)}
+{capture assign="detail_url"}index.php?module=P_CustomVoucher&action=DetailView&record={$fields.p_customvoucher_id_c.value}{/capture}
 <a href="{sugar_ajax_url url=$detail_url}">{/if}
-<span id="p_something_id_c" class="sugar_field" data-id-value="{$fields.p_something_id_c.value}">{$fields.voucher_c.value}</span>
-{if !empty($fields.p_something_id_c.value)}</a>{/if}
+<span id="p_customvoucher_id_c" class="sugar_field" data-id-value="{$fields.p_customvoucher_id_c.value}">{$fields.voucher_discount_c.value}</span>
+{if !empty($fields.p_customvoucher_id_c.value)}</a>{/if}
 {/if}
 </td>
 {counter name="fieldsUsed"}
 <td width='12.5%' scope="col">
-{if !$fields.total_discount_c.hidden}
+{if !$fields.total_discount.hidden}
 {capture name="label" assign="label"}{sugar_translate label='LBL_TOTAL_DISCOUNT' module='P_CustomInvoices'}{/capture}
 {$label|strip_semicolon}:
 {/if}
 </td>
 <td width='37.5%'  >
-{if !$fields.total_discount_c.hidden}
+{if !$fields.total_discount.hidden}
 {counter name="panelFieldCount"}
 
-<span class="sugar_field" id="{$fields.total_discount_c.name}">
-{sugar_number_format var=$fields.total_discount_c.value precision=0 }
+<span class="sugar_field" id="{$fields.total_discount.name}">
+{sugar_number_format var=$fields.total_discount.value precision=0 }
 </span>
 {/if}
 </td>
@@ -203,17 +219,17 @@ SUGAR.util.doWhen(function(){
 <tr>
 {counter name="fieldsUsed"}
 <td width='12.5%' scope="col">
-{if !$fields.total_price_c.hidden}
+{if !$fields.total_price.hidden}
 {capture name="label" assign="label"}{sugar_translate label='LBL_TOTAL_PRICE' module='P_CustomInvoices'}{/capture}
 {$label|strip_semicolon}:
 {/if}
 </td>
 <td width='37.5%' colspan='3' >
-{if !$fields.total_price_c.hidden}
+{if !$fields.total_price.hidden}
 {counter name="panelFieldCount"}
 
-<span class="sugar_field" id="{$fields.total_price_c.name}">
-{sugar_number_format var=$fields.total_price_c.value precision=0 }
+<span class="sugar_field" id="{$fields.total_price.name}">
+{sugar_number_format var=$fields.total_price.value precision=0 }
 </span>
 {/if}
 </td>
@@ -234,12 +250,34 @@ SUGAR.util.doWhen(function(){
 <img border="0" id="detailpanel_2_img_hide" src="{sugar_getimagepath file="basic_search.gif"}"></a>
 <a href="javascript:void(0)" class="expandLink" onclick="expandPanel(2);">
 <img border="0" id="detailpanel_2_img_show" src="{sugar_getimagepath file="advanced_search.gif"}"></a>
-{sugar_translate label='LBL_DETAILVIEW_PANEL1' module='P_CustomInvoices'}
+{sugar_translate label='LBL_DETAILVIEW_PANEL2' module='P_CustomInvoices'}
 <script>
 document.getElementById('detailpanel_2').className += ' expanded';
 </script>
 </h4>
-<table id='LBL_DETAILVIEW_PANEL1' class="panelContainer" cellspacing='{$gridline}'>
+<table id='LBL_DETAILVIEW_PANEL2' class="panelContainer" cellspacing='{$gridline}'>
+{counter name="fieldsUsed" start=0 print=false assign="fieldsUsed"}
+{counter name="fieldsHidden" start=0 print=false assign="fieldsHidden"}
+{capture name="tr" assign="tableRow"}
+<tr>
+{counter name="fieldsUsed"}
+<td width='12.5%' scope="col">
+{if !$fields.product_information_c.hidden}
+{capture name="label" assign="label"}{sugar_translate label='LBL_PRODUCT_INFORMATION' module='P_CustomInvoices'}{/capture}
+{$label|strip_semicolon}:
+{/if}
+</td>
+<td width='37.5%' colspan='3' >
+{if !$fields.product_information_c.hidden}
+{counter name="panelFieldCount"}
+<span id="product_information_c" class="sugar_field">{include file="custom/modules/P_CustomInvoices/tpls/customProductInfo.tpl"}</span>
+{/if}
+</td>
+</tr>
+{/capture}
+{if $fieldsUsed > 0 && $fieldsUsed != $fieldsHidden}
+{$tableRow}
+{/if}
 {counter name="fieldsUsed" start=0 print=false assign="fieldsUsed"}
 {counter name="fieldsHidden" start=0 print=false assign="fieldsHidden"}
 {capture name="tr" assign="tableRow"}
@@ -251,55 +289,18 @@ document.getElementById('detailpanel_2').className += ' expanded';
 {$label|strip_semicolon}:
 {/if}
 </td>
-<td width='37.5%' colspan='3' >
+<td width='37.5%'  >
 {if !$fields.description.hidden}
 {counter name="panelFieldCount"}
 
 <span class="sugar_field" id="{$fields.description.name|escape:'html'|url2html|nl2br}">{$fields.description.value|escape:'htmlentitydecode'|escape:'html'|url2html|nl2br}</span>
 {/if}
 </td>
-</tr>
-{/capture}
-{if $fieldsUsed > 0 && $fieldsUsed != $fieldsHidden}
-{$tableRow}
-{/if}
-{counter name="fieldsUsed" start=0 print=false assign="fieldsUsed"}
-{counter name="fieldsHidden" start=0 print=false assign="fieldsHidden"}
-{capture name="tr" assign="tableRow"}
-<tr>
 {counter name="fieldsUsed"}
 <td width='12.5%' scope="col">
-{if !$fields.created_by_name.hidden}
-{capture name="label" assign="label"}{sugar_translate label='LBL_CREATED' module='P_CustomInvoices'}{/capture}
-{$label|strip_semicolon}:
-{/if}
+&nbsp;
 </td>
 <td width='37.5%'  >
-{if !$fields.created_by_name.hidden}
-{counter name="panelFieldCount"}
-
-<span id="created_by" class="sugar_field" data-id-value="{$fields.created_by.value}">{$fields.created_by_name.value}</span>
-{/if}
-</td>
-{counter name="fieldsUsed"}
-<td width='12.5%' scope="col">
-{if !$fields.date_entered.hidden}
-{capture name="label" assign="label"}{sugar_translate label='LBL_DATE_ENTERED' module='P_CustomInvoices'}{/capture}
-{$label|strip_semicolon}:
-{/if}
-</td>
-<td width='37.5%'  >
-{if !$fields.date_entered.hidden}
-{counter name="panelFieldCount"}
-
-
-{if strlen($fields.date_entered.value) <= 0}
-{assign var="value" value=$fields.date_entered.default_value }
-{else}
-{assign var="value" value=$fields.date_entered.value }
-{/if}
-<span class="sugar_field" id="{$fields.date_entered.name}">{$value}</span>
-{/if}
 </td>
 </tr>
 {/capture}
@@ -310,7 +311,7 @@ document.getElementById('detailpanel_2').className += ' expanded';
 <script type="text/javascript">SUGAR.util.doWhen("typeof initPanel == 'function'", function() {ldelim} initPanel(2, 'expanded'); {rdelim}); </script>
 </div>
 {if $panelFieldCount == 0}
-<script>document.getElementById("LBL_DETAILVIEW_PANEL1").style.display='none';</script>
+<script>document.getElementById("LBL_DETAILVIEW_PANEL2").style.display='none';</script>
 {/if}
 </div>
 </div>

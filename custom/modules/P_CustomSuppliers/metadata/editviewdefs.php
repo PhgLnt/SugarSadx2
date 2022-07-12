@@ -39,8 +39,8 @@ array (
           0 => 'name',
           1 => 
           array (
-            'name' => 'created_by_name',
-            'label' => 'LBL_CREATED',
+            'name' => 'supplier_number',
+            'label' => 'LBL_SUPPLIER_NUMBER',
           ),
         ),
         1 => 
@@ -48,6 +48,14 @@ array (
           0 => 'description',
         ),
         2 => 
+        array (
+          0 => 
+          array (
+            'name' => 'created_by_name',
+            'label' => 'LBL_CREATED',
+          ),
+        ),
+        3 => 
         array (
           0 => 
           array (

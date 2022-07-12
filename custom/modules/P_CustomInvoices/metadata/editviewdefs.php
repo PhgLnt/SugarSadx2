@@ -39,33 +39,33 @@ array (
           0 => 'name',
           1 => 
           array (
-            'name' => 'cus_invoice_c',
+            'name' => 'order_name_c',
             'studio' => 'visible',
-            'label' => 'LBL_CUS_INVOICE',
+            'label' => 'LBL_ORDER_NAME',
           ),
         ),
         1 => 
         array (
           0 => 
           array (
-            'name' => 'order_number_c',
+            'name' => 'customer_invoice_c',
             'studio' => 'visible',
-            'label' => 'LBL_ORDER_NUMBER',
-          ),
-        ),
-        2 => 
-        array (
-          0 => 
-          array (
-            'name' => 'voucher_c',
-            'studio' => 'visible',
-            'label' => 'LBL_VOUCHER',
+            'label' => 'LBL_CUSTOMER_INVOICE',
           ),
           1 => 
           array (
             'name' => 'date_entered',
             'comment' => 'Date record created',
             'label' => 'LBL_DATE_ENTERED',
+          ),
+        ),
+        2 => 
+        array (
+          0 => 
+          array (
+            'name' => 'voucher_discount_c',
+            'studio' => 'visible',
+            'label' => 'LBL_VOUCHER_DISCOUNT',
           ),
         ),
         3 => 

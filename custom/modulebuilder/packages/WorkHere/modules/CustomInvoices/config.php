@@ -44,6 +44,6 @@ $config = array (
   array (
     'basic' => 1,
   ),
-  'label' => 'CustomInvoices',
+  'label' => 'Invoices',
   'importable' => false,
 );

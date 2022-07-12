@@ -6996,6 +6996,39 @@
     'rhs_key' => 'assigned_user_id',
     'relationship_type' => 'one-to-many',
   ),
+  'p_customorddetail_modified_user' => 
+  array (
+    'name' => 'p_customorddetail_modified_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'P_CustomOrdDetail',
+    'rhs_table' => 'p_customorddetail',
+    'rhs_key' => 'modified_user_id',
+    'relationship_type' => 'one-to-many',
+  ),
+  'p_customorddetail_created_by' => 
+  array (
+    'name' => 'p_customorddetail_created_by',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'P_CustomOrdDetail',
+    'rhs_table' => 'p_customorddetail',
+    'rhs_key' => 'created_by',
+    'relationship_type' => 'one-to-many',
+  ),
+  'p_customorddetail_assigned_user' => 
+  array (
+    'name' => 'p_customorddetail_assigned_user',
+    'lhs_module' => 'Users',
+    'lhs_table' => 'users',
+    'lhs_key' => 'id',
+    'rhs_module' => 'P_CustomOrdDetail',
+    'rhs_table' => 'p_customorddetail',
+    'rhs_key' => 'assigned_user_id',
+    'relationship_type' => 'one-to-many',
+  ),
   'p_customorders_modified_user' => 
   array (
     'name' => 'p_customorders_modified_user',
@@ -7095,36 +7128,36 @@
     'rhs_key' => 'assigned_user_id',
     'relationship_type' => 'one-to-many',
   ),
-  'p_something_modified_user' => 
+  'p_customvoucher_modified_user' => 
   array (
-    'name' => 'p_something_modified_user',
+    'name' => 'p_customvoucher_modified_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
     'lhs_key' => 'id',
-    'rhs_module' => 'P_Something',
-    'rhs_table' => 'p_something',
+    'rhs_module' => 'P_CustomVoucher',
+    'rhs_table' => 'p_customvoucher',
     'rhs_key' => 'modified_user_id',
     'relationship_type' => 'one-to-many',
   ),
-  'p_something_created_by' => 
+  'p_customvoucher_created_by' => 
   array (
-    'name' => 'p_something_created_by',
+    'name' => 'p_customvoucher_created_by',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
     'lhs_key' => 'id',
-    'rhs_module' => 'P_Something',
-    'rhs_table' => 'p_something',
+    'rhs_module' => 'P_CustomVoucher',
+    'rhs_table' => 'p_customvoucher',
     'rhs_key' => 'created_by',
     'relationship_type' => 'one-to-many',
   ),
-  'p_something_assigned_user' => 
+  'p_customvoucher_assigned_user' => 
   array (
-    'name' => 'p_something_assigned_user',
+    'name' => 'p_customvoucher_assigned_user',
     'lhs_module' => 'Users',
     'lhs_table' => 'users',
     'lhs_key' => 'id',
-    'rhs_module' => 'P_Something',
-    'rhs_table' => 'p_something',
+    'rhs_module' => 'P_CustomVoucher',
+    'rhs_table' => 'p_customvoucher',
     'rhs_key' => 'assigned_user_id',
     'relationship_type' => 'one-to-many',
   ),

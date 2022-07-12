@@ -63,6 +63,10 @@ class P_CustomInvoices_sugar extends Basic {
 		var $assigned_user_id;
 		var $assigned_user_name;
 		var $assigned_user_link;
+		var $total_discount;
+		var $total_price;
+		var $invoice_number;
+		var $order_price;
 		function P_CustomInvoices_sugar(){	
 		parent::Basic();
 	}

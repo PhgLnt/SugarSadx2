@@ -1,5 +1,5 @@
 <?php
-// created: 2022-06-24 05:16:08
+// created: 2022-07-12 07:19:17
 $mod_strings = array (
   'LBL_ID' => 'ID',
   'LBL_DATE_ENTERED' => 'Date Created',
@@ -9,9 +9,9 @@ $mod_strings = array (
   'LBL_MODIFIED_NAME' => 'Modified By Name',
   'LBL_CREATED' => 'Created By',
   'LBL_CREATED_ID' => 'Created By Id',
-  'LBL_DESCRIPTION' => 'Note',
+  'LBL_DESCRIPTION' => 'Description',
   'LBL_DELETED' => 'Deleted',
-  'LBL_NAME' => 'Order Name',
+  'LBL_NAME' => 'Order name code',
   'LBL_CREATED_USER' => 'Created by User',
   'LBL_MODIFIED_USER' => 'Modified by User',
   'LBL_LIST_NAME' => 'Name',
@@ -39,9 +39,5 @@ $mod_strings = array (
   'LBL_P_ORDERS_SUBPANEL_TITLE' => 'CustomOrders',
   'LNK_IMPORT_P_CUSTOMORDERS' => 'Import CustomOrders',
   'LBL_P_CUSTOMORDERS_SUBPANEL_TITLE' => 'CustomOrders',
-  'LBL_PRODUCT_ORDER_P_CUSTOMPRODUCTS_ID' => 'Product Name (related  ID)',
-  'LBL_PRODUCT_ORDER' => 'Product Name',
-  'LBL_QUANTITY' => 'Quantity',
-  'LBL_UNIT_PRICE' => 'Unit Price',
-  'LBL_TOTAL_PRICE' => 'Total Price',
+  'LBL_ORDER_STATUS' => 'Order Status',
 );

@@ -37,7 +37,11 @@ array (
         0 => 
         array (
           0 => 'name',
-          1 => '',
+          1 => 
+          array (
+            'name' => 'product_number',
+            'label' => 'LBL_PRODUCT_NUMBER',
+          ),
         ),
         1 => 
         array (

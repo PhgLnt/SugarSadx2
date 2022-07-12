@@ -1,5 +1,5 @@
 <?php
- // created: 2022-06-24 05:20:59
+ // created: 2022-07-07 10:57:28
 $dictionary['P_CustomInvoices']['fields']['voucher_c']['labelValue']='Voucher';
 
  ?>

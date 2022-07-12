@@ -52,42 +52,21 @@ array (
         array (
           0 => 
           array (
-            'name' => 'product_order_c',
-            'studio' => 'visible',
-            'label' => 'LBL_PRODUCT_ORDER',
+            'name' => 'order_status_c',
+            'label' => 'LBL_ORDER_STATUS',
           ),
-        ),
-        2 => 
-        array (
-          0 => 
-          array (
-            'name' => 'quantity_c',
-            'label' => 'LBL_QUANTITY',
-          ),
-          1 => 
-          array (
-            'name' => 'unit_price_c',
-            'label' => 'LBL_UNIT_PRICE',
-          ),
-        ),
-        3 => 
-        array (
-          0 => 
-          array (
-            'name' => 'total_price_c',
-            'label' => 'LBL_TOTAL_PRICE',
-          ),
-        ),
-        4 => 
-        array (
-          0 => 'date_entered',
           1 => 
           array (
             'name' => 'created_by_name',
             'label' => 'LBL_CREATED',
           ),
         ),
-        5 => 
+        2 => 
+        array (
+          0 => 'date_entered',
+          1 => 'date_modified',
+        ),
+        3 => 
         array (
           0 => 'description',
         ),

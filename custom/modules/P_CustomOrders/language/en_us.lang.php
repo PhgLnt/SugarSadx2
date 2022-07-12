@@ -1,11 +1,6 @@
 <?php
-// created: 2022-06-23 16:45:06
+// created: 2022-07-08 03:19:25
 $mod_strings = array (
-  'LBL_PRODUCT_ORDER_P_CUSTOMPRODUCTS_ID' => 'Product Name (related  ID)',
-  'LBL_PRODUCT_ORDER' => 'Product Name',
-  'LBL_NAME' => 'Order Name',
-  'LBL_QUANTITY' => 'Quantity',
-  'LBL_UNIT_PRICE' => 'Unit Price',
-  'LBL_DESCRIPTION' => 'Note',
-  'LBL_TOTAL_PRICE' => 'Total Price',
+  'LBL_ORDER_STATUS' => 'Order Status',
+  'LBL_NAME' => 'Order name code',
 );

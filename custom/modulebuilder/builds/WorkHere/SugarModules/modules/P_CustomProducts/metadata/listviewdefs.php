@@ -47,6 +47,15 @@ array (
     'width' => '10%',
     'default' => true,
   ),
+  'MODIFIED_BY_NAME' => 
+  array (
+    'type' => 'relate',
+    'link' => true,
+    'label' => 'LBL_MODIFIED_NAME',
+    'id' => 'MODIFIED_USER_ID',
+    'width' => '10%',
+    'default' => false,
+  ),
   'ASSIGNED_USER_NAME' => 
   array (
     'width' => '9%',
