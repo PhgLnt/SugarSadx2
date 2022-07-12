@@ -9,10 +9,10 @@
             <td>Total</td>
         </tr>
         <tr>
-        {foreach from=$arrayResult item=foo}
+        {foreach from=$arrayResult item=col}
         <tr>
-            {foreach from=$foo item=bar}
-                <td>{$bar}</td>
+            {foreach from=$col item=row}
+                <td>{$row}</td>
             {/foreach}
         </tr>
         {/foreach}
