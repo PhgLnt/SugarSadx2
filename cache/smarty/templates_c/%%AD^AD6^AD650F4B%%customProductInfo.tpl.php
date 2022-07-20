@@ -1,4 +1,4 @@
-<?php /* Smarty version 2.6.11, created on 2022-07-12 10:47:19
+<?php /* Smarty version 2.6.11, created on 2022-07-18 08:29:07
          compiled from custom/modules/P_CustomInvoices/tpls/customProductInfo.tpl */ ?>
 
 <link rel="stylesheet" href="custom.css">

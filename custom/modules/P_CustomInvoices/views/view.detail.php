@@ -60,7 +60,11 @@ class P_CustomInvoicesViewDetail extends ViewDetail
 
         $result = $db->query($sqlSelect);
         while ($row = $db->fetchByAssoc($result)) {
-            $arrayFirst[$i] = array($row['STT'], $row['name'], $row['up'], $row['quantity'], $row['total']);
+            $arrayFirst[$i] = array('stt'=>$row['STT'],
+                                    'name'=>$row['name'],
+                                    'unitprice'=>$row['up'],
+                                    'quantity'=>$row['quantity'],
+                                    'total'=>$row['total']);
             $i++;
             }
         $this->ss->assign("arrayResult", $arrayFirst);
